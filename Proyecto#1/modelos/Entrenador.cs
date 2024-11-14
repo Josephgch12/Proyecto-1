@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 namespace Proyecto_1.modelos
 {
   
-    // Clase Entrenador que hereda de Usuario y representa a un entrenador del gimnasio.
+    
     public class Entrenador : Usuario
     {
-        // Propiedad para almacenar la especialidad del entrenador.
         public string Especialidad { get; set; }
-
-        // Lista de clases que imparte el entrenador.
         public List<Clase> Clases { get; set; } = new List<Clase>();
 
-        // Implementación del método MostrarNotificaciones para los entrenadores.
+        // Constructor que acepta ID, nombre, Gmail y tipo de usuario
+        public Entrenador(int id, string nombre, string gmail)
+            : base(id, nombre, gmail, "Entrenador") // Llama al constructor base
+        {
+        }
+
         public override void MostrarNotificaciones()
         {
-            // Lógica para mostrar notificaciones específicas para entrenadores.
-            // Aquí puedes añadir notificaciones relevantes para el entrenador.
+            // Implementar lógica para notificaciones de entrenadores
         }
     }
 }

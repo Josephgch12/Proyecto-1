@@ -46,21 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controladores\ControladorGimnasio.cs" />
     <Compile Include="modelos\Clase.cs" />
     <Compile Include="modelos\Cliente.cs" />
     <Compile Include="modelos\Entrenador.cs" />
     <Compile Include="modelos\Inventario.cs" />
     <Compile Include="modelos\Usuario.cs" />
-    <Compile Include="view\Form1.cs">
+    <Compile Include="view\PaginaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="view\PaginaPrincipal.Designer.cs">
+      <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="view\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="view\InicioDeSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\InicioDeSesion.Designer.cs">
+      <DependentUpon>InicioDeSesion.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\InicioDeSesion.resx">
+      <DependentUpon>InicioDeSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PaginaPrincipal.resx">
+      <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,7 +96,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="controladores\" />
+    <None Include="Resources\800x453-smart-fit-3-medium-size.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\321.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

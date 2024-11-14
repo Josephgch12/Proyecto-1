@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 
 namespace Proyecto_1.modelos
 {
-   
-    // Clase base Usuario que representa a los usuarios del sistema (clientes y entrenadores).
-    public abstract class Usuario
-    {
-        // Propiedad para almacenar el nombre del usuario.
-        public string Nombre { get; set; }
 
-        // Propiedad para almacenar el correo electrónico del usuario.
-        public string Email { get; set; }
+    
+        public abstract class Usuario
+        {
+            public int Id { get; protected set; } // ID del usuario
+            public string Nombre { get; set; }
+            public string Gmail { get; set; }
+            public string TipoUsuario { get; set; } // "Cliente" o "Entrenador"
 
-        // Método abstracto para mostrar notificaciones, que debe ser implementado por las clases derivadas.
-        public abstract void MostrarNotificaciones();
-    }
+            // Constructor base
+            protected Usuario(int id, string nombre, string gmail, string tipoUsuario)
+            {
+                Id = id;
+                Nombre = nombre;
+                Gmail = gmail;
+                TipoUsuario = tipoUsuario;
+            }
+
+            public abstract void MostrarNotificaciones();
+        }
 }

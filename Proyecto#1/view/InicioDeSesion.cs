@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_1
+namespace Proyecto_1.view
 {
-    public partial class Form1 : Form
+    public partial class InicioDeSesion : Form
     {
-        public Form1()
+        public InicioDeSesion()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
