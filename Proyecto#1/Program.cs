@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_1.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Proyecto_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PaginaPrincipal());
+            Application.Run(new InicioDeSesion());
         }
     }
 }

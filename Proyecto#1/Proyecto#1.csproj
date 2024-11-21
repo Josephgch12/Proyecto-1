@@ -51,6 +51,7 @@
     <Compile Include="modelos\Cliente.cs" />
     <Compile Include="modelos\Entrenador.cs" />
     <Compile Include="modelos\Inventario.cs" />
+    <Compile Include="modelos\Membresia.cs" />
     <Compile Include="modelos\Usuario.cs" />
     <Compile Include="view\PaginaPrincipal.cs">
       <SubType>Form</SubType>
