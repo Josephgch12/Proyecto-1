@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_1.view
 {
-    partial class EliminarCliente
+    partial class MatricularClase
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBoxEntrenadores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.Eliminar = new System.Windows.Forms.Button();
+            this.btnMatricular = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // comboBoxEntrenadores
+            // 
+            this.comboBoxEntrenadores.FormattingEnabled = true;
+            this.comboBoxEntrenadores.Location = new System.Drawing.Point(253, 144);
+            this.comboBoxEntrenadores.Name = "comboBoxEntrenadores";
+            this.comboBoxEntrenadores.Size = new System.Drawing.Size(359, 21);
+            this.comboBoxEntrenadores.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 135);
+            this.label1.Location = new System.Drawing.Point(250, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
+            this.label1.Size = new System.Drawing.Size(130, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "eliga la clase que desee :)";
             // 
-            // txtid
+            // btnMatricular
             // 
-            this.txtid.Location = new System.Drawing.Point(307, 128);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(100, 20);
-            this.txtid.TabIndex = 2;
+            this.btnMatricular.Location = new System.Drawing.Point(380, 171);
+            this.btnMatricular.Name = "btnMatricular";
+            this.btnMatricular.Size = new System.Drawing.Size(75, 23);
+            this.btnMatricular.TabIndex = 2;
+            this.btnMatricular.Text = "Matricular";
+            this.btnMatricular.UseVisualStyleBackColor = true;
+            this.btnMatricular.Click += new System.EventHandler(this.btnMatricular_Click);
             // 
-            // Eliminar
-            // 
-            this.Eliminar.Location = new System.Drawing.Point(318, 172);
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(75, 23);
-            this.Eliminar.TabIndex = 3;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
-            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
-            // 
-            // EliminarCliente
+            // MatricularClase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_1.Properties.Resources._321;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Eliminar);
-            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.btnMatricular);
             this.Controls.Add(this.label1);
-            this.Name = "EliminarCliente";
-            this.Text = "EliminarCliente";
+            this.Controls.Add(this.comboBoxEntrenadores);
+            this.Name = "MatricularClase";
+            this.Text = "MatricularClase";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,8 +78,8 @@
 
         #endregion
 
+        private System.Windows.Forms.ComboBox comboBoxEntrenadores;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.Button Eliminar;
+        private System.Windows.Forms.Button btnMatricular;
     }
 }

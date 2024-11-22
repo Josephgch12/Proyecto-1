@@ -23,7 +23,7 @@ namespace Proyecto_1.view
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
-            string id = txtId.Text; // Obtener el ID del TextBox.
+            string id = txtid.Text; // Obtener el ID del TextBox.
 
             // Validar que el campo no esté vacío.
             if (string.IsNullOrWhiteSpace(id))

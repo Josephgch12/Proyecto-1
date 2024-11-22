@@ -27,5 +27,7 @@ namespace Proyecto_1.modelos
         {
             return $"{EntrenadorNombre},{PuntosFuertes},{Horarios}";
         }
+
+      
+        }
     }
-}

@@ -56,5 +56,17 @@ namespace Proyecto_1
             // Muestra el formulario
             eliminarEntrenadorForm.ShowDialog(); // Esto abre el formulario como un cuadro de diálogo modal
         }
+
+        private void matricularClaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Especificar la ruta del archivo CSV de entrenadores
+            string rutaArchivoEntrenadores = "entrenadores.csv"; 
+
+            // Crear una instancia del formulario MatricularClase y pasar la ruta del archivo
+            MatricularClase matricularClaseForm = new MatricularClase(rutaArchivoEntrenadores);
+
+            // Mostrar el formulario
+            matricularClaseForm.ShowDialog(); 
+        }
     }
 }
