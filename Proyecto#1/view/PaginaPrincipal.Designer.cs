@@ -95,14 +95,16 @@
             // agregarClienteToolStripMenuItem
             // 
             this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.agregarClienteToolStripMenuItem.Text = "Agregar cliente";
+            this.agregarClienteToolStripMenuItem.Click += new System.EventHandler(this.agregarClienteToolStripMenuItem_Click);
             // 
             // inicioDeSesionToolStripMenuItem
             // 
             this.inicioDeSesionToolStripMenuItem.Name = "inicioDeSesionToolStripMenuItem";
-            this.inicioDeSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inicioDeSesionToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.inicioDeSesionToolStripMenuItem.Text = "eliminar cliente";
+            this.inicioDeSesionToolStripMenuItem.Click += new System.EventHandler(this.inicioDeSesionToolStripMenuItem_Click);
             // 
             // entrenadorToolStripMenuItem
             // 
@@ -116,14 +118,16 @@
             // agregarEntrenadorToolStripMenuItem
             // 
             this.agregarEntrenadorToolStripMenuItem.Name = "agregarEntrenadorToolStripMenuItem";
-            this.agregarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.agregarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarEntrenadorToolStripMenuItem.Text = "agregar entrenador";
+            this.agregarEntrenadorToolStripMenuItem.Click += new System.EventHandler(this.agregarEntrenadorToolStripMenuItem_Click);
             // 
             // eliminarEntrenadorToolStripMenuItem
             // 
             this.eliminarEntrenadorToolStripMenuItem.Name = "eliminarEntrenadorToolStripMenuItem";
-            this.eliminarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.eliminarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarEntrenadorToolStripMenuItem.Text = "eliminar entrenador";
+            this.eliminarEntrenadorToolStripMenuItem.Click += new System.EventHandler(this.eliminarEntrenadorToolStripMenuItem_Click);
             // 
             // clasesToolStripMenuItem
             // 
@@ -138,19 +142,19 @@
             // matricularClaseToolStripMenuItem
             // 
             this.matricularClaseToolStripMenuItem.Name = "matricularClaseToolStripMenuItem";
-            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.matricularClaseToolStripMenuItem.Text = "matricular clase";
             // 
             // eliminarSuClaseToolStripMenuItem
             // 
             this.eliminarSuClaseToolStripMenuItem.Name = "eliminarSuClaseToolStripMenuItem";
-            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.eliminarSuClaseToolStripMenuItem.Text = "eliminar su clase ";
             // 
             // historialDeClasesToolStripMenuItem
             // 
             this.historialDeClasesToolStripMenuItem.Name = "historialDeClasesToolStripMenuItem";
-            this.historialDeClasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historialDeClasesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.historialDeClasesToolStripMenuItem.Text = "Historial de clases ";
             // 
             // membresiasToolStripMenuItem
@@ -254,7 +258,6 @@
             this.label1.Size = new System.Drawing.Size(298, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "BIENVENIDOS A";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

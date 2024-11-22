@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 namespace Proyecto_1.modelos
 {
-  
-    
-    public class Entrenador : Usuario
-    {
-        public string Especialidad { get; set; }
-        public List<Clase> Clases { get; set; } = new List<Clase>();
 
-        // Constructor que acepta ID, nombre, Gmail y tipo de usuario
-        public Entrenador(int id, string nombre, string gmail)
-            : base(id, nombre, gmail, "Entrenador") // Llama al constructor base
+
+    public class Entrenador
+    {
+        public string EntrenadorNombre { get; set; } // Nombre del entrenador
+        public string PuntosFuertes { get; set; } // Puntos fuertes del entrenador
+        public string Horarios { get; set; } // Horarios del entrenador
+
+        // Constructor
+        public Entrenador(string nombre, string puntosFuertes, string horarios)
         {
+            EntrenadorNombre = nombre;
+            PuntosFuertes = puntosFuertes;
+            Horarios = horarios;
         }
 
-        public override void MostrarNotificaciones()
+        // Método para convertir el objeto a una línea CSV
+        public override string ToString()
         {
-            // Implementar lógica para notificaciones de entrenadores
+            return $"{EntrenadorNombre},{PuntosFuertes},{Horarios}";
         }
     }
 }

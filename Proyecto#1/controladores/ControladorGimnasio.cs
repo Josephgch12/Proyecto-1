@@ -23,13 +23,8 @@ namespace Proyecto_1.controladores
             clientes.Add(cliente);
             // Se muestra un mensaje de confirmación en la consola
             Console.WriteLine("Cliente agregado: " + cliente.Nombre);
-        }
-        // Método para agregar un nuevo entrenador a la lista de entrenadores
-        public void AgregarEntrenador(Entrenador entrenador)
-        {
-            entrenadores.Add(entrenador);
-            Console.WriteLine("Entrenador agregado: " + entrenador.Nombre);
-        }
+        }       
+        
         // Método para agregar una nueva clase a la lista de clases
         public void AgregarClase(Clase clase)
         {
@@ -49,28 +44,6 @@ namespace Proyecto_1.controladores
             return clases;
         }
 
-        // Método para iniciar sesión
-        public Usuario IniciarSesion(string gmail)
-        {
-            // Busca en la lista de clientes
-            foreach (var cliente in clientes)
-            {
-                if (cliente.Gmail.Equals(gmail, StringComparison.OrdinalIgnoreCase))
-                {
-                    return cliente; // Retorna el cliente si se encuentra
-                }
-            }
-
-            // Busca en la lista de entrenadores
-            foreach (var entrenador in entrenadores)
-            {
-                if (entrenador.Gmail.Equals(gmail, StringComparison.OrdinalIgnoreCase))
-                {
-                    return entrenador; // Retorna el entrenador si se encuentra
-                }
-            }
-
-            return null; // Retorna null si no se encuentra el usuario
-        }
+        
     }
 }

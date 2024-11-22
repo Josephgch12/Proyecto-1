@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_1.modelos;
+using Proyecto_1.view;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,25 +18,43 @@ namespace Proyecto_1
         {
             InitializeComponent();
         }
+     
 
-        private void button1_Click(object sender, EventArgs e)
+        private void agregarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Crear una instancia del formulario AgregarCliente y pasar la ruta del archivo CSV.
+            AgregarCliente agregarClienteForm = new AgregarCliente("usuarios_gimnasio.csv");
+
+            // Mostrar el formulario como un diálogo modal.
+            agregarClienteForm.ShowDialog();
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void inicioDeSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Crear una instancia del formulario EliminarCliente y pasar la ruta del archivo CSV.
+            EliminarCliente eliminarClienteForm = new EliminarCliente("usuarios_gimnasio.csv");
 
+            // Mostrar el formulario como un diálogo modal.
+            eliminarClienteForm.ShowDialog();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void agregarEntrenadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Crear una instancia del formulario AgregarEntrenador y pasar la ruta del archivo CSV.
+            AgregarEntrenador agregarEntrenadorForm = new AgregarEntrenador("entrenadores.csv");
 
+            // Mostrar el formulario como un diálogo modal.
+            agregarEntrenadorForm.ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void eliminarEntrenadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /// Cambia "entrenadores.csv" por la ruta correcta de tu archivo CSV
+            EliminarEntrenador eliminarEntrenadorForm = new EliminarEntrenador("entrenadores.csv");
 
+            // Muestra el formulario
+            eliminarEntrenadorForm.ShowDialog(); // Esto abre el formulario como un cuadro de diálogo modal
         }
     }
 }

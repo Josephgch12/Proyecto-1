@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace Proyecto_1.modelos
 {
-   
-   
-    public class Cliente : Usuario
+
+
+    public class Cliente
     {
-        public DateTime FechaMembresia { get; set; }
+        public int Id { get; set; } // Identificador único del cliente.
+        public string Nombre { get; set; } // Nombre del cliente.
+        public string Correo { get; set; } // Correo electrónico del cliente.
+        public string Tipo { get; set; } // Tipo de cliente (Cliente o Entrenador).
+        public string Contraseña { get; set; } // Contraseña del cliente.
 
-        // Constructor que acepta ID, nombre, Gmail y tipo de usuario
-        public Cliente(int id, string nombre, string gmail)
-            : base(id, nombre, gmail, "Cliente") // Llama al constructor base
+        // Constructor para inicializar un nuevo cliente.
+        public Cliente(int id, string nombre, string correo, string tipo, string contraseña)
         {
-        }
-
-        public override void MostrarNotificaciones()
-        {
-            if ((FechaMembresia - DateTime.Now).TotalDays <= 5)
-            {
-                Console.WriteLine("Su mensualidad se encuentra al cobro.");
-            }
+            Id = id;
+            Nombre = nombre;
+            Correo = correo;
+            Tipo = tipo;
+            Contraseña = contraseña;
         }
     }
 }
