@@ -68,5 +68,26 @@ namespace Proyecto_1
             // Mostrar el formulario
             matricularClaseForm.ShowDialog(); 
         }
+
+        private void eliminarSuClaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            string rutaArchivo = "Reservas.csv"; // Ruta del archivo CSV
+            string usuarioActualId = SessionManager.UsuarioActualId; // Obtener el ID del usuario actual
+
+            // Verificar que el ID del usuario actual no sea nulo o vacío
+            if (string.IsNullOrEmpty(usuarioActualId))
+            {
+                MessageBox.Show("No hay un usuario en sesión. Por favor, inicie sesión.");
+                return;
+            }
+
+            // Crear una instancia del formulario EliminarClase
+            EliminarClase eliminarClaseForm = new EliminarClase(rutaArchivo, usuarioActualId);
+
+            // Mostrar el formulario como un diálogo modal
+            eliminarClaseForm.ShowDialog();
+
+        }
     }
 }

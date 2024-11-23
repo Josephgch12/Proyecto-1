@@ -51,6 +51,7 @@
     <Compile Include="modelos\Cliente.cs" />
     <Compile Include="modelos\Entrenador.cs" />
     <Compile Include="modelos\GestionClientes.cs" />
+    <Compile Include="modelos\idClase.cs" />
     <Compile Include="modelos\Inventario.cs" />
     <Compile Include="modelos\Membresia.cs" />
     <Compile Include="modelos\Usuario.cs" />
@@ -116,8 +117,8 @@
     <EmbeddedResource Include="view\AgregarEntrenador.resx">
       <DependentUpon>AgregarEntrenador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\EliminarCliente.resx">
-      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="view\EliminarClase.resx">
+      <DependentUpon>EliminarClase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\EliminarEntrenador.resx">
       <DependentUpon>EliminarEntrenador.cs</DependentUpon>
