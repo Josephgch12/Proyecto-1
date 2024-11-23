@@ -8,5 +8,6 @@ namespace Proyecto_1.modelos
 {
     internal class Membresia
     {
+        string casa;
     }
 }
