@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Proyecto_1
 {
@@ -72,21 +73,19 @@ namespace Proyecto_1
         private void eliminarSuClaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            string rutaArchivo = "Reservas.csv"; // Ruta del archivo CSV
-            string usuarioActualId = SessionManager.UsuarioActualId; // Obtener el ID del usuario actual
+            /// Especificar la ruta del archivo CSV de reservas
+            string rutaArchivoReservas = "reservas.csv";
 
-            // Verificar que el ID del usuario actual no sea nulo o vacío
-            if (string.IsNullOrEmpty(usuarioActualId))
+            // Verificar si el archivo existe
+            if (!File.Exists(rutaArchivoReservas))
             {
-                MessageBox.Show("No hay un usuario en sesión. Por favor, inicie sesión.");
+                MessageBox.Show("El archivo de reservas no se encuentra. Por favor, verifica la ruta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Crear una instancia del formulario EliminarClase
-            EliminarClase eliminarClaseForm = new EliminarClase(rutaArchivo, usuarioActualId);
-
-            // Mostrar el formulario como un diálogo modal
-            eliminarClaseForm.ShowDialog();
+            // Crear una instancia del formulario EliminarClase y pasar la ruta del archivo
+            EliminarClase eliminarClaseForm = new EliminarClase(rutaArchivoReservas);
+            eliminarClaseForm.ShowDialog(); // Mostrar el formulario como un diálogo modal
 
         }
     }

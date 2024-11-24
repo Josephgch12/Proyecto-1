@@ -51,7 +51,6 @@
     <Compile Include="modelos\Cliente.cs" />
     <Compile Include="modelos\Entrenador.cs" />
     <Compile Include="modelos\GestionClientes.cs" />
-    <Compile Include="modelos\idClase.cs" />
     <Compile Include="modelos\Inventario.cs" />
     <Compile Include="modelos\Membresia.cs" />
     <Compile Include="modelos\Usuario.cs" />

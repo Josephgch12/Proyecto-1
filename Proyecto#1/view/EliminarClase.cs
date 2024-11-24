@@ -3,90 +3,68 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Proyecto_1.view
 {
     public partial class EliminarClase : Form
     {
-        private string rutaArchivo; // Ruta del archivo CSV
-        private string usuarioActual; // Email o ID del usuario que inicia sesión
+        private string rutaArchivoReservas;
 
-        public EliminarClase(string rutaArchivo, string usuarioActual)
+        public EliminarClase(string ruta)
         {
             InitializeComponent();
-            this.rutaArchivo = rutaArchivo;
-            this.usuarioActual = usuarioActual;
-            CargarClases(); // Cargar clases del usuario
+            rutaArchivoReservas = ruta;
+            CargarReservas();
         }
 
-        private void CargarClases()
+        private void CargarReservas()
         {
-            if (File.Exists(rutaArchivo))
+            if (File.Exists(rutaArchivoReservas))
             {
-                var lineas = File.ReadAllLines(rutaArchivo);
-                var clasesUsuario = lineas
-                    .Where(linea => linea.StartsWith(usuarioActual + ",")) // Filtrar por nombre de usuario
-                    .Select(linea =>
-                    {
-                        var partes = linea.Split(',');
-                        return $"{partes[1]} - {partes[2].Trim('"')}"; // Obtener solo el nombre de la clase y el horario
-                    })
-                    .Distinct() // Asegurarse de que no haya duplicados
-                    .ToList();
+                var lineas = File.ReadAllLines(rutaArchivoReservas);
+                comboBoxClases.Items.Clear(); // Limpiar elementos existentes
 
-                comboBoxReservas.DataSource = clasesUsuario; // Asignar al ComboBox
+                foreach (var linea in lineas)
+                {
+                    // Agregar cada reserva al ComboBox
+                    comboBoxClases.Items.Add(linea);
+                }
             }
             else
             {
-                MessageBox.Show("El archivo de reservas no se encuentra.");
+                MessageBox.Show("El archivo de reservas no se encuentra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+       
+        private void comboBoxClases_TextChanged(object sender, EventArgs e)
+        {
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string claseSeleccionada = comboBoxReservas.SelectedItem?.ToString();
-
-            if (string.IsNullOrWhiteSpace(claseSeleccionada))
+            if (comboBoxClases.SelectedItem == null)
             {
-                MessageBox.Show("Por favor, seleccione una clase válida.");
+                MessageBox.Show("Por favor, selecciona una reserva para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (EliminarClaseDelArchivo(claseSeleccionada))
-            {
-                MessageBox.Show("Clase eliminada exitosamente.");
-                CargarClases(); // Recargar clases después de la eliminación
-            }
-            else
-            {
-                MessageBox.Show("No se encontró la clase seleccionada.");
-            }
+            string reservaSeleccionada = comboBoxClases.SelectedItem.ToString();
+            var lineas = File.ReadAllLines(rutaArchivoReservas).ToList();
 
-            this.Close(); // Cierra el formulario.
-        }
-        private bool EliminarClaseDelArchivo(string clase)
-        {
-            var lineas = File.ReadAllLines(rutaArchivo).ToList();
+            // Eliminar la reserva seleccionada
+            lineas.Remove(reservaSeleccionada);
+            File.WriteAllLines(rutaArchivoReservas, lineas);
 
-            // Filtrar las líneas que no corresponden al usuario y a la clase seleccionada
-            var lineasActualizadas = lineas
-                .Where(linea => !(linea.StartsWith(usuarioActual + ",") && linea.Contains(clase.Split('-')[0].Trim())))
-                .ToList();
-
-            // Solo escribimos el archivo si hay cambios
-            if (lineas.Count != lineasActualizadas.Count)
-            {
-                File.WriteAllLines(rutaArchivo, lineasActualizadas);
-                return true; // Clase eliminada con éxito.
-            }
-
-            return false; // No se encontró la clase.
+            MessageBox.Show("Reserva eliminada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CargarReservas(); // Recargar las reservas en el ComboBox
         }
     }
-
 }
