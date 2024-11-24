@@ -120,6 +120,9 @@
     <EmbeddedResource Include="view\EliminarClase.resx">
       <DependentUpon>EliminarClase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\EliminarCliente.resx">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\EliminarEntrenador.resx">
       <DependentUpon>EliminarEntrenador.cs</DependentUpon>
     </EmbeddedResource>
