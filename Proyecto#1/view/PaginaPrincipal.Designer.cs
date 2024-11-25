@@ -91,7 +91,7 @@
             this.agregarClienteToolStripMenuItem,
             this.inicioDeSesionToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = " Cliente";
             // 
             // agregarClienteToolStripMenuItem
@@ -114,7 +114,7 @@
             this.agregarEntrenadorToolStripMenuItem,
             this.eliminarEntrenadorToolStripMenuItem});
             this.entrenadorToolStripMenuItem.Name = "entrenadorToolStripMenuItem";
-            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.entrenadorToolStripMenuItem.Text = "Entrenador";
             // 
             // agregarEntrenadorToolStripMenuItem
@@ -144,14 +144,14 @@
             // matricularClaseToolStripMenuItem
             // 
             this.matricularClaseToolStripMenuItem.Name = "matricularClaseToolStripMenuItem";
-            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matricularClaseToolStripMenuItem.Text = "matricular clase";
             this.matricularClaseToolStripMenuItem.Click += new System.EventHandler(this.matricularClaseToolStripMenuItem_Click);
             // 
             // eliminarSuClaseToolStripMenuItem
             // 
             this.eliminarSuClaseToolStripMenuItem.Name = "eliminarSuClaseToolStripMenuItem";
-            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarSuClaseToolStripMenuItem.Text = "eliminar su clase ";
             this.eliminarSuClaseToolStripMenuItem.Click += new System.EventHandler(this.eliminarSuClaseToolStripMenuItem_Click);
             // 
@@ -161,7 +161,7 @@
             this.clienteToolStripMenuItem1,
             this.entrenadorToolStripMenuItem1});
             this.historialDeClasesToolStripMenuItem.Name = "historialDeClasesToolStripMenuItem";
-            this.historialDeClasesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.historialDeClasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.historialDeClasesToolStripMenuItem.Text = "Historial de clases ";
             // 
             // clienteToolStripMenuItem1
@@ -269,6 +269,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.exitToolStripMenuItem.Text = "Exit ";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label1
             // 

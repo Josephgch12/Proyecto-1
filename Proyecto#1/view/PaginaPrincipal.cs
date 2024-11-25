@@ -131,6 +131,12 @@ namespace Proyecto_1
             NotificacionesMantenimiento notificacionesForm = new NotificacionesMantenimiento(rutaArchivo);
             notificacionesForm.Show();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Cerrar la aplicación
+            Application.Exit();
+        }
     }
     }
 
