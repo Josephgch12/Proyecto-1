@@ -88,5 +88,49 @@ namespace Proyecto_1
             eliminarClaseForm.ShowDialog(); // Mostrar el formulario como un diálogo modal
 
         }
+
+        private void consultarInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Especificar la ruta del archivo CSV de máquinas
+            string rutaArchivoMaquinas = "inventario_gimnasio.csv";
+
+            // Crear una instancia del formulario ConsultarMaquinas
+            ConsultarMaquinas consultarForm = new ConsultarMaquinas();
+
+            // Mostrar el formulario
+            consultarForm.ShowDialog();
+        }
+
+        private void agregarMaquinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Especificar la ruta del archivo CSV de máquinas
+            string rutaArchivoMaquinas = "inventario_gimnasio.csv";
+
+            // Crear una instancia del formulario AgregarMaquina
+            AgregarMaquina agregarForm = new AgregarMaquina();
+
+            // Mostrar el formulario
+            agregarForm.ShowDialog();
+        }
+
+        private void elimarMaquinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Especificar la ruta del archivo CSV de máquinas
+            string rutaArchivoMaquinas = "inventario_gimnasio.csv";
+
+            // Crear una instancia del formulario EliminarMaquina y pasar la ruta del archivo
+            EliminarMaquina eliminarForm = new EliminarMaquina(rutaArchivoMaquinas);
+
+            // Mostrar el formulario
+            eliminarForm.ShowDialog();
+        }
+
+        private void notificacionesDeMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string rutaArchivo = "inventario_gimnasio.csv";
+            NotificacionesMantenimiento notificacionesForm = new NotificacionesMantenimiento(rutaArchivo);
+            notificacionesForm.Show();
+        }
     }
-}
+    }
+

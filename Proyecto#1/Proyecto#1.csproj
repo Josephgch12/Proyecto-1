@@ -52,7 +52,6 @@
     <Compile Include="modelos\Entrenador.cs" />
     <Compile Include="modelos\GestionClientes.cs" />
     <Compile Include="modelos\Inventario.cs" />
-    <Compile Include="modelos\Membresia.cs" />
     <Compile Include="modelos\Usuario.cs" />
     <Compile Include="view\AgregarCliente.cs">
       <SubType>Form</SubType>
@@ -65,6 +64,18 @@
     </Compile>
     <Compile Include="view\AgregarEntrenador.Designer.cs">
       <DependentUpon>AgregarEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\AgregarMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\AgregarMaquina.Designer.cs">
+      <DependentUpon>AgregarMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ConsultarMaquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ConsultarMaquinas.Designer.cs">
+      <DependentUpon>ConsultarMaquinas.cs</DependentUpon>
     </Compile>
     <Compile Include="view\EliminarClase.cs">
       <SubType>Form</SubType>
@@ -84,6 +95,12 @@
     <Compile Include="view\EliminarEntrenador.Designer.cs">
       <DependentUpon>EliminarEntrenador.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\EliminarMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\EliminarMaquina.Designer.cs">
+      <DependentUpon>EliminarMaquina.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\HistorialClase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +112,12 @@
     </Compile>
     <Compile Include="view\MatricularClase.Designer.cs">
       <DependentUpon>MatricularClase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\NotificacionesMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\NotificacionesMantenimiento.Designer.cs">
+      <DependentUpon>NotificacionesMantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="view\PaginaPrincipal.cs">
       <SubType>Form</SubType>
@@ -116,6 +139,12 @@
     <EmbeddedResource Include="view\AgregarEntrenador.resx">
       <DependentUpon>AgregarEntrenador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\AgregarMaquina.resx">
+      <DependentUpon>AgregarMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ConsultarMaquinas.resx">
+      <DependentUpon>ConsultarMaquinas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\EliminarClase.resx">
       <DependentUpon>EliminarClase.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,11 +154,17 @@
     <EmbeddedResource Include="view\EliminarEntrenador.resx">
       <DependentUpon>EliminarEntrenador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\EliminarMaquina.resx">
+      <DependentUpon>EliminarMaquina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\InicioDeSesion.resx">
       <DependentUpon>InicioDeSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\MatricularClase.resx">
       <DependentUpon>MatricularClase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\NotificacionesMantenimiento.resx">
+      <DependentUpon>NotificacionesMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
@@ -162,6 +197,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\321.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maquinas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maquina epico.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
