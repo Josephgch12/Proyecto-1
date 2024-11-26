@@ -168,6 +168,14 @@ namespace Proyecto_1
             // Mostrar el formulario
             informeContableForm.Show(); // Usar Show para mostrar el formulario
         }
+
+        private void generarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string rutaArchivo = "Facturas";
+            GenerarFactura generarFacturaForm = new GenerarFactura();
+            // Mostrar el formulario
+            generarFacturaForm.ShowDialog();
+        }
     }
     }
 

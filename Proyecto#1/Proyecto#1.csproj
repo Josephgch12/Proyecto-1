@@ -76,9 +76,11 @@
     <Compile Include="modelos\Clase.cs" />
     <Compile Include="modelos\Cliente.cs" />
     <Compile Include="modelos\Entrenador.cs" />
+    <Compile Include="modelos\Factura.cs" />
     <Compile Include="modelos\GestionClientes.cs" />
     <Compile Include="modelos\Inventario.cs" />
     <Compile Include="modelos\Membresia.cs" />
+    <Compile Include="modelos\ServicioFacturacion.cs" />
     <Compile Include="modelos\Usuario.cs" />
     <Compile Include="view\AgregarCliente.cs">
       <SubType>Form</SubType>
@@ -133,6 +135,12 @@
     </Compile>
     <Compile Include="view\EliminarMaquina.Designer.cs">
       <DependentUpon>EliminarMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\GenerarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\GenerarFactura.Designer.cs">
+      <DependentUpon>GenerarFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="view\HistorialClase.cs">
       <SubType>Form</SubType>
@@ -204,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\EliminarMaquina.resx">
       <DependentUpon>EliminarMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\GenerarFactura.resx">
+      <DependentUpon>GenerarFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\InformeContable.resx">
       <DependentUpon>InformeContable.cs</DependentUpon>

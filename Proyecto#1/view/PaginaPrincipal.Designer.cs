@@ -53,6 +53,8 @@
             this.reportesDeMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informeContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historiaDeLasClasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generarFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,6 +70,7 @@
             this.membresiasToolStripMenuItem,
             this.inventarioToolStripMenuItem,
             this.reportesToolStripMenuItem,
+            this.facturaciónToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -259,6 +262,21 @@
             this.historiaDeLasClasesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.historiaDeLasClasesToolStripMenuItem.Text = "Historia de las clases ";
             // 
+            // facturaciónToolStripMenuItem
+            // 
+            this.facturaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generarFacturaToolStripMenuItem});
+            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.facturaciónToolStripMenuItem.Text = "facturación";
+            // 
+            // generarFacturaToolStripMenuItem
+            // 
+            this.generarFacturaToolStripMenuItem.Name = "generarFacturaToolStripMenuItem";
+            this.generarFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generarFacturaToolStripMenuItem.Text = "Generar Factura";
+            this.generarFacturaToolStripMenuItem.Click += new System.EventHandler(this.generarFacturaToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -349,6 +367,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem entrenadorToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generarFacturaToolStripMenuItem;
     }
 }
 
