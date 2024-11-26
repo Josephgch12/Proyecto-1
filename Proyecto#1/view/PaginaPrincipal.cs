@@ -156,6 +156,18 @@ namespace Proyecto_1
             // Mostrar el formulario
             reportesMatriculaForm.Show();
         }
+
+        private void informeContableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Ruta del archivo CSV
+            string rutaArchivo = "inventario_gimnasio.csv"; // Asegúrate de que la ruta sea correcta
+
+            // Crear una instancia del formulario informeContable y pasar la ruta del archivo
+            informeContable informeContableForm = new informeContable(rutaArchivo);
+
+            // Mostrar el formulario
+            informeContableForm.Show(); // Usar Show para mostrar el formulario
+        }
     }
     }
 

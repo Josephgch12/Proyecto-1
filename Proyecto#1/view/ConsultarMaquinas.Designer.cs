@@ -35,9 +35,9 @@
             // listBoxMaquinas
             // 
             this.listBoxMaquinas.FormattingEnabled = true;
-            this.listBoxMaquinas.Location = new System.Drawing.Point(303, 68);
+            this.listBoxMaquinas.Location = new System.Drawing.Point(131, 68);
             this.listBoxMaquinas.Name = "listBoxMaquinas";
-            this.listBoxMaquinas.Size = new System.Drawing.Size(153, 212);
+            this.listBoxMaquinas.Size = new System.Drawing.Size(556, 225);
             this.listBoxMaquinas.TabIndex = 0;
             // 
             // btnRefrescar

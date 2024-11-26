@@ -15,10 +15,11 @@ namespace Proyecto_1.view
     {
         // Especificar la ruta del archivo CSV de máquinas
         private const string rutaArchivoMaquinas = "inventario_gimnasio.csv";
-
+        private Random random;
         public AgregarMaquina()
         {
             InitializeComponent();
+            random = new Random();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -39,8 +40,12 @@ namespace Proyecto_1.view
                 return;
             }
 
+            // Generar valores aleatorios para las nuevas columnas
+            decimal cantidadIngresos = random.Next(5000, 20001); // Valor aleatorio entre 5000 y 20000
+            decimal cantidadEgresos = random.Next(3000, 15001); // Valor aleatorio entre 3000 y 15000
+
             // Crear la nueva línea para el archivo CSV
-            string nuevaMaquina = $"{id},{nombre},{tipo},{fechaAdquisicion},{vidaUtil},{estado}";
+            string nuevaMaquina = $"{id},{nombre},{tipo},{fechaAdquisicion},{vidaUtil},{estado},{cantidadIngresos},{cantidadEgresos}";
 
             // Agregar la nueva máquina al archivo CSV
             File.AppendAllText(rutaArchivoMaquinas, nuevaMaquina + Environment.NewLine);

@@ -251,6 +251,7 @@
             this.informeContableToolStripMenuItem.Name = "informeContableToolStripMenuItem";
             this.informeContableToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.informeContableToolStripMenuItem.Text = "Informe contable";
+            this.informeContableToolStripMenuItem.Click += new System.EventHandler(this.informeContableToolStripMenuItem_Click);
             // 
             // historiaDeLasClasesToolStripMenuItem
             // 

@@ -140,6 +140,12 @@
     <Compile Include="view\HistorialClase.Designer.cs">
       <DependentUpon>HistorialClase.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\InformeContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\InformeContable.Designer.cs">
+      <DependentUpon>InformeContable.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\MatricularClase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     <EmbeddedResource Include="view\EliminarMaquina.resx">
       <DependentUpon>EliminarMaquina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\InformeContable.resx">
+      <DependentUpon>InformeContable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\InicioDeSesion.resx">
       <DependentUpon>InicioDeSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +261,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\membresias foto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platilla.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
