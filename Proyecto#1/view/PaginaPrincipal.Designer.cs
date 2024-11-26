@@ -44,7 +44,6 @@
             this.entrenadorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.membresiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarMembresiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarMembresiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarMaquinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,7 +90,7 @@
             this.agregarClienteToolStripMenuItem,
             this.inicioDeSesionToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.clienteToolStripMenuItem.Text = " Cliente";
             // 
             // agregarClienteToolStripMenuItem
@@ -114,7 +113,7 @@
             this.agregarEntrenadorToolStripMenuItem,
             this.eliminarEntrenadorToolStripMenuItem});
             this.entrenadorToolStripMenuItem.Name = "entrenadorToolStripMenuItem";
-            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.entrenadorToolStripMenuItem.Text = "Entrenador";
             // 
             // agregarEntrenadorToolStripMenuItem
@@ -144,14 +143,14 @@
             // matricularClaseToolStripMenuItem
             // 
             this.matricularClaseToolStripMenuItem.Name = "matricularClaseToolStripMenuItem";
-            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.matricularClaseToolStripMenuItem.Text = "matricular clase";
             this.matricularClaseToolStripMenuItem.Click += new System.EventHandler(this.matricularClaseToolStripMenuItem_Click);
             // 
             // eliminarSuClaseToolStripMenuItem
             // 
             this.eliminarSuClaseToolStripMenuItem.Name = "eliminarSuClaseToolStripMenuItem";
-            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.eliminarSuClaseToolStripMenuItem.Text = "eliminar su clase ";
             this.eliminarSuClaseToolStripMenuItem.Click += new System.EventHandler(this.eliminarSuClaseToolStripMenuItem_Click);
             // 
@@ -161,7 +160,7 @@
             this.clienteToolStripMenuItem1,
             this.entrenadorToolStripMenuItem1});
             this.historialDeClasesToolStripMenuItem.Name = "historialDeClasesToolStripMenuItem";
-            this.historialDeClasesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.historialDeClasesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.historialDeClasesToolStripMenuItem.Text = "Historial de clases ";
             // 
             // clienteToolStripMenuItem1
@@ -179,8 +178,7 @@
             // membresiasToolStripMenuItem
             // 
             this.membresiasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarMembresiaToolStripMenuItem,
-            this.administrarMembresiaToolStripMenuItem});
+            this.consultarMembresiaToolStripMenuItem});
             this.membresiasToolStripMenuItem.Name = "membresiasToolStripMenuItem";
             this.membresiasToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.membresiasToolStripMenuItem.Text = "Membresias ";
@@ -188,14 +186,9 @@
             // consultarMembresiaToolStripMenuItem
             // 
             this.consultarMembresiaToolStripMenuItem.Name = "consultarMembresiaToolStripMenuItem";
-            this.consultarMembresiaToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.consultarMembresiaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.consultarMembresiaToolStripMenuItem.Text = "Consultar membresia ";
-            // 
-            // administrarMembresiaToolStripMenuItem
-            // 
-            this.administrarMembresiaToolStripMenuItem.Name = "administrarMembresiaToolStripMenuItem";
-            this.administrarMembresiaToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.administrarMembresiaToolStripMenuItem.Text = "Administrar membresia ";
+            this.consultarMembresiaToolStripMenuItem.Click += new System.EventHandler(this.consultarMembresiaToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -251,6 +244,7 @@
             this.reportesDeMatriculaToolStripMenuItem.Name = "reportesDeMatriculaToolStripMenuItem";
             this.reportesDeMatriculaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.reportesDeMatriculaToolStripMenuItem.Text = "Reportes de matricula";
+            this.reportesDeMatriculaToolStripMenuItem.Click += new System.EventHandler(this.reportesDeMatriculaToolStripMenuItem_Click);
             // 
             // informeContableToolStripMenuItem
             // 
@@ -339,7 +333,6 @@
         private System.Windows.Forms.ToolStripMenuItem historialDeClasesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem membresiasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarMembresiaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarMembresiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarInventarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarMaquinaToolStripMenuItem;

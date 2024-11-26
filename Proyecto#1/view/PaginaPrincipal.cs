@@ -137,6 +137,18 @@ namespace Proyecto_1
             // Cerrar la aplicación
             Application.Exit();
         }
+
+        private void consultarMembresiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string rutaArchivo = "usuarios_gimnasio.csv"; // Ruta del archivo CSV
+            ConsultarMembresia consultarMembresiaForm = new ConsultarMembresia(rutaArchivo);
+            consultarMembresiaForm.Show(); // Muestra el formulario
+        }
+
+        private void reportesDeMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

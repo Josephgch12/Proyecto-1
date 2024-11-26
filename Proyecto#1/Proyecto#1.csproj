@@ -46,12 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controladores\ControladorGimnasio.cs" />
+    <Compile Include="controladores\MatriculaCalculator.cs" />
+    <Compile Include="controladores\MembresiaController.cs" />
     <Compile Include="modelos\Clase.cs" />
     <Compile Include="modelos\Cliente.cs" />
     <Compile Include="modelos\Entrenador.cs" />
     <Compile Include="modelos\GestionClientes.cs" />
     <Compile Include="modelos\Inventario.cs" />
+    <Compile Include="modelos\Membresia.cs" />
     <Compile Include="modelos\Usuario.cs" />
     <Compile Include="view\AgregarCliente.cs">
       <SubType>Form</SubType>
@@ -76,6 +78,12 @@
     </Compile>
     <Compile Include="view\ConsultarMaquinas.Designer.cs">
       <DependentUpon>ConsultarMaquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ConsultarMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ConsultarMembresia.Designer.cs">
+      <DependentUpon>ConsultarMembresia.cs</DependentUpon>
     </Compile>
     <Compile Include="view\EliminarClase.cs">
       <SubType>Form</SubType>
@@ -145,6 +153,9 @@
     <EmbeddedResource Include="view\ConsultarMaquinas.resx">
       <DependentUpon>ConsultarMaquinas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\ConsultarMembresia.resx">
+      <DependentUpon>ConsultarMembresia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\EliminarClase.resx">
       <DependentUpon>EliminarClase.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\maquina epico.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membresias foto.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
