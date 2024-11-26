@@ -147,7 +147,14 @@ namespace Proyecto_1
 
         private void reportesDeMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Ruta del archivo CSV
+            string rutaArchivo = "usuarios_gimnasio.csv";
 
+            // Crear una instancia del formulario reportesMatricula y pasar la ruta del archivo
+            reportesMatricula reportesMatriculaForm = new reportesMatricula(rutaArchivo);
+
+            // Mostrar el formulario
+            reportesMatriculaForm.Show();
         }
     }
     }
