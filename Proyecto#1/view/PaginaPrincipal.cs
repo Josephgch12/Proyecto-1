@@ -15,11 +15,45 @@ namespace Proyecto_1
 {
     public partial class PaginaPrincipal : Form
     {
+        private string tipoUsuario; // Propiedad para almacenar el tipo de usuario
+
+        // Constructor que acepta el tipo de usuario
+        public PaginaPrincipal(string tipoUsuario)
+        {
+            InitializeComponent();
+            this.tipoUsuario = tipoUsuario; // Almacenar el tipo de usuario
+            ConfigurarMenu(); // Configurar el menú según el tipo de usuario
+        }
+
+        // Constructor por defecto (opcional, si necesitas uno sin parámetros)
         public PaginaPrincipal()
         {
             InitializeComponent();
+            // Puedes dejar este constructor vacío o agregar lógica adicional si es necesario
         }
-     
+
+        private void ConfigurarMenu()
+        {
+            if (tipoUsuario == "Cliente")
+            {
+                // Ocultar las opciones del menú que no son para clientes
+                eliminarEntrenadorToolStripMenuItem.Visible = false;
+                agregarEntrenadorToolStripMenuItem.Visible = false;
+                matricularClaseToolStripMenuItem.Visible = true;
+                eliminarSuClaseToolStripMenuItem.Visible = true;
+                notificacionesDeMantenimientoToolStripMenuItem.Visible = false;
+                reportesDeMatriculaToolStripMenuItem.Visible = false;
+                informeContableToolStripMenuItem.Visible = false;
+                generarFacturaToolStripMenuItem.Visible = false;
+                historiaDeLasClasesToolStripMenuItem.Visible = false;
+                registrarEntrenadorToolStripMenuItem.Visible = false;
+                consultarInventarioToolStripMenuItem.Visible = false;
+                agregarMaquinaToolStripMenuItem.Visible= false;
+                elimarMaquinaToolStripMenuItem.Visible = false;
+                notificacionesDeMantenimientoToolStripMenuItem.Visible =false;
+            }
+            // Si es entrenador, no se necesita hacer nada, ya que todas las opciones son visibles
+        }
 
         private void agregarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -193,7 +227,10 @@ namespace Proyecto_1
             string rutaArchivo = "addEntrenadores.csv"; 
             AddEntrenador addEntrenadorForm = new AddEntrenador(rutaArchivo);
             addEntrenadorForm.ShowDialog();
-        }
+      
+              }
     }
+
+
     }
 

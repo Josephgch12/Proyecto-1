@@ -28,20 +28,19 @@ namespace Proyecto_1.view
             string password = textBoxPassword.Text;
 
             // Validar las credenciales
-            if (ValidarCredenciales(id, password))
+            string tipoUsuario = ValidarCredenciales(id, password);
+            if (tipoUsuario != null)
             {
-                MessageBox.Show("Inicio de sesión exitoso.");
+                MessageBox.Show("Inicio de sesión exitoso como " + tipoUsuario + ".");
 
-                // Crear una instancia del formulario principal
-                PaginaPrincipal mainForm = new PaginaPrincipal();
+                // Crear una instancia del formulario principal y pasar el tipo de usuario
+                PaginaPrincipal mainForm = new PaginaPrincipal(tipoUsuario);
 
                 // Mostrar el formulario principal
                 mainForm.Show();
 
                 // Ocultar el formulario de inicio de sesión
                 this.Hide();
-
-
             }
             else
             {
@@ -49,24 +48,25 @@ namespace Proyecto_1.view
             }
         }
 
-        private bool ValidarCredenciales(string id, string password)
+        private string ValidarCredenciales(string id, string password)
         {
-            // Ruta del archivo CSV
-            string rutaArchivo = "usuarios_gimnasio.csv";
+            // Rutas de los archivos CSV
+            string rutaArchivoUsuarios = "usuarios_gimnasio.csv";
+            string rutaArchivoEntrenadores = "addEntrenadores.csv";
 
-            // Verificar si el archivo existe
-            if (!File.Exists(rutaArchivo))
+            // Verificar si los archivos existen
+            if (!File.Exists(rutaArchivoUsuarios) || !File.Exists(rutaArchivoEntrenadores))
             {
-                MessageBox.Show("El archivo de usuarios no se encuentra.");
-                return false;
+                MessageBox.Show("Uno o más archivos de usuarios no se encuentran.");
+                return null;
             }
 
             // Definir la fecha de inicio
             DateTime fechaInicio = new DateTime(2024, 11, 20);
 
-            // Leer el archivo CSV y validar las credenciales
-            var lineas = File.ReadAllLines(rutaArchivo);
-            foreach (var linea in lineas.Skip(1)) // Saltar la cabecera
+            // Leer el archivo de usuarios y validar las credenciales
+            var lineasUsuarios = File.ReadAllLines(rutaArchivoUsuarios);
+            foreach (var linea in lineasUsuarios.Skip(1)) // Saltar la cabecera
             {
                 var partes = linea.Split(',');
                 if (partes.Length == 6) // Asegúrate de que el número de columnas sea correcto
@@ -85,15 +85,30 @@ namespace Proyecto_1.view
                             {
                                 MessageBox.Show("Su mensualidad se encuentra al cobro. Fecha de vencimiento: " + fechaVencimiento.ToShortDateString());
                             }
-                            return true; // Credenciales válidas
+                            return "Cliente"; // Credenciales válidas para cliente
                         }
                     }
                 }
             }
 
-            return false; // Credenciales no válidas
-        }
+            // Leer el archivo de entrenadores y validar las credenciales
+            var lineasEntrenadores = File.ReadAllLines(rutaArchivoEntrenadores);
+            foreach (var linea in lineasEntrenadores.Skip(1)) // Saltar la cabecera
+            {
+                var partes = linea.Split(',');
+                if (partes.Length == 5) // Asegúrate de que el número de columnas sea correcto
+                {
+                    string idArchivo = partes[0].Trim(); // ID está en la primera columna
+                    string passwordArchivo = partes[4].Trim(); // Contraseña está en la última columna
 
+                    if (idArchivo == id && passwordArchivo == password)
+                    {
+                        return "Entrenador"; // Credenciales válidas para entrenador
+                    }
+                }
+            }
+
+            return null; // Credenciales no válidas
+        }
     }
 }
-
