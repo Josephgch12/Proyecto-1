@@ -82,6 +82,12 @@
     <Compile Include="modelos\Membresia.cs" />
     <Compile Include="modelos\ServicioFacturacion.cs" />
     <Compile Include="modelos\Usuario.cs" />
+    <Compile Include="view\addEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\addEntrenador.Designer.cs">
+      <DependentUpon>addEntrenador.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     <Compile Include="view\ReportesMatricula.Designer.cs">
       <DependentUpon>ReportesMatricula.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\addEntrenador.resx">
+      <DependentUpon>addEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +256,25 @@
     <EmbeddedResource Include="view\ReportesMatricula.resx">
       <DependentUpon>ReportesMatricula.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Assets\addEntrenadores.csv" />
+    <None Include="Assets\entrenadores.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Facturas.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\inventario_gimnasio.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\Reservas.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\reservasClases .csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\usuarios_gimnasio.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

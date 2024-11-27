@@ -1,0 +1,22 @@
+ID de Maquina,Nombre de Maquina,Tipo de Maquina,Fecha de Adquisicion,Vida util,Estado,cantidadIngresos,cantidadEgresos
+M-001,maquina 1,Fuerza,2025-03-15,5,Operativa,10000,8000
+M-002,maquina 2,Cardio,2025-02-10,5,Operativa,12000,8500
+M-003,maquina 3,Fuerza,2025-01-05,5,Operativa,11000,8000
+M-004,maquina 4,Cardio,2024-12-20,5,Operativa,10500,8200
+M-005,maquina 5,Fuerza,2025-06-08,5,Operativa,13000,8700
+M-006,maquina 6,Cardio,2025-04-27,5,Operativa,12500,8600
+M-007,maquina 7,Fuerza,2025-03-02,5,Operativa,11500,8100
+M-008,maquina 8,Cardio,2025-05-18,5,Operativa,12000,8500
+M-009,maquina 9,Fuerza,2025-02-25,5,Operativa,11200,8000
+M-010,maquina 10,Cardio,2025-06-10,5,Operativa,13500,8800
+M-011,maquina 11,Fuerza,2025-08-05,5,Operativa,12500,8700
+M-012,maquina 12,Cardio,2025-07-01,5,Operativa,11800,8600
+M-013,maquina 13,Fuerza,2025-03-20,5,Operativa,13000,8900
+M-014,maquina 14,Cardio,2025-04-12,5,Operativa,12200,8600
+M-015,maquina 15,Fuerza,2025-06-28,5,Operativa,14000,9000
+M-016,maquina 16,Cardio,2025-01-15,5,Operativa,11500,8400
+M-017,maquina 17,Fuerza,2025-02-08,5,Operativa,12000,8600
+M-018,maquina 18,Cardio,2025-05-02,5,Operativa,12700,8700
+M-019,maquina 19,Fuerza,2025-06-25,5,Operativa,14500,9200
+M-020,maquina 20,Cardio,2025-07-19,5,Operativa,13800,8900
+931931293,m-25,Fuerza,2024-11-21,4,operando,15048,4661

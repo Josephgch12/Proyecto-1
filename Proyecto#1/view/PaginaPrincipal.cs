@@ -187,6 +187,13 @@ namespace Proyecto_1
             // Mostrar el formulario
             historialClasesForm.ShowDialog();
         }
+
+        private void registrarEntrenadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string rutaArchivo = "addEntrenadores.csv"; 
+            AddEntrenador addEntrenadorForm = new AddEntrenador(rutaArchivo);
+            addEntrenadorForm.ShowDialog();
+        }
     }
     }
 

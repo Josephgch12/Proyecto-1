@@ -36,6 +36,7 @@
             this.entrenadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEntrenadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarEntrenadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarEntrenadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matricularClaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarSuClaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,7 +112,8 @@
             // 
             this.entrenadorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarEntrenadorToolStripMenuItem,
-            this.eliminarEntrenadorToolStripMenuItem});
+            this.eliminarEntrenadorToolStripMenuItem,
+            this.registrarEntrenadorToolStripMenuItem});
             this.entrenadorToolStripMenuItem.Name = "entrenadorToolStripMenuItem";
             this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.entrenadorToolStripMenuItem.Text = "Entrenador";
@@ -119,16 +121,23 @@
             // agregarEntrenadorToolStripMenuItem
             // 
             this.agregarEntrenadorToolStripMenuItem.Name = "agregarEntrenadorToolStripMenuItem";
-            this.agregarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.agregarEntrenadorToolStripMenuItem.Text = "agregar entrenador";
+            this.agregarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.agregarEntrenadorToolStripMenuItem.Text = "clase-punto fuerte entrenador";
             this.agregarEntrenadorToolStripMenuItem.Click += new System.EventHandler(this.agregarEntrenadorToolStripMenuItem_Click);
             // 
             // eliminarEntrenadorToolStripMenuItem
             // 
             this.eliminarEntrenadorToolStripMenuItem.Name = "eliminarEntrenadorToolStripMenuItem";
-            this.eliminarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.eliminarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.eliminarEntrenadorToolStripMenuItem.Text = "eliminar entrenador";
             this.eliminarEntrenadorToolStripMenuItem.Click += new System.EventHandler(this.eliminarEntrenadorToolStripMenuItem_Click);
+            // 
+            // registrarEntrenadorToolStripMenuItem
+            // 
+            this.registrarEntrenadorToolStripMenuItem.Name = "registrarEntrenadorToolStripMenuItem";
+            this.registrarEntrenadorToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.registrarEntrenadorToolStripMenuItem.Text = "Registrar Entrenador";
+            this.registrarEntrenadorToolStripMenuItem.Click += new System.EventHandler(this.registrarEntrenadorToolStripMenuItem_Click);
             // 
             // clasesToolStripMenuItem
             // 
@@ -142,14 +151,14 @@
             // matricularClaseToolStripMenuItem
             // 
             this.matricularClaseToolStripMenuItem.Name = "matricularClaseToolStripMenuItem";
-            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.matricularClaseToolStripMenuItem.Text = "matricular clase";
             this.matricularClaseToolStripMenuItem.Click += new System.EventHandler(this.matricularClaseToolStripMenuItem_Click);
             // 
             // eliminarSuClaseToolStripMenuItem
             // 
             this.eliminarSuClaseToolStripMenuItem.Name = "eliminarSuClaseToolStripMenuItem";
-            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.eliminarSuClaseToolStripMenuItem.Text = "eliminar su clase ";
             this.eliminarSuClaseToolStripMenuItem.Click += new System.EventHandler(this.eliminarSuClaseToolStripMenuItem_Click);
             // 
@@ -342,6 +351,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarFacturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarEntrenadorToolStripMenuItem;
     }
 }
 
