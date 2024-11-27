@@ -21,7 +21,7 @@ namespace Proyecto_1.view
 
         private void CargarHistorialClases()
         {
-            string rutaArchivo = "reservasClases .csv"; 
+            string rutaArchivo = "reservas.csv"; 
 
             if (!File.Exists(rutaArchivo))
             {

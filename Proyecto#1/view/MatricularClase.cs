@@ -37,13 +37,15 @@ namespace Proyecto_1.view
                 foreach (var linea in lineas.Skip(1)) // Saltar la cabecera
                 {
                     var partes = linea.Split(',');
-                    if (partes.Length >= 3)
+                    if (partes.Length >= 4) 
                     {
-                        var entrenador = new Entrenador(partes[0].Trim(), partes[1].Trim(), partes[2].Trim());
+                        var entrenador = new Entrenador(partes[0].Trim(), partes[1].Trim(), partes[2].Trim(), partes[3].Trim()); // ID al final
                         entrenadores.Add(entrenador); // Agregar el objeto Entrenador a la lista
                     }
                 }
                 comboBoxEntrenadores.DataSource = entrenadores; // Asignar la lista al ComboBox
+                comboBoxEntrenadores.DisplayMember = "DisplayInfo"; // Mostrar la información combinada
+                comboBoxEntrenadores.ValueMember = "Id";
             }
             else
             {
@@ -57,23 +59,33 @@ namespace Proyecto_1.view
         private void btnMatricular_Click(object sender, EventArgs e)
         {
             {
-                string entrenadorSeleccionado = comboBoxEntrenadores.SelectedItem.ToString();
-                string fechaMatricula = DateTime.Now.ToString("yyyy-MM-dd"); // Fecha actual
-
-                // Guardar en reservas.csv
-                using (StreamWriter sw = new StreamWriter("reservas.csv", true)) // true para agregar al archivo
+                var entrenadorSeleccionado = (Entrenador)comboBoxEntrenadores.SelectedItem; // Obtener el objeto Entrenador
+                if (entrenadorSeleccionado != null) // Verificar que se haya seleccionado un entrenador
                 {
-                    sw.WriteLine($"{entrenadorSeleccionado},{fechaMatricula}"); // Guardar el entrenador y la fecha
-                }
+                    // Guardar en reservas.csv
+                    using (StreamWriter sw = new StreamWriter("reservas.csv", true)) // true para agregar al archivo
+                    {
+                        sw.WriteLine($"{entrenadorSeleccionado.Nombre},{entrenadorSeleccionado.PuntosFuertes},{entrenadorSeleccionado.Horarios},{entrenadorSeleccionado.Id}"); // Acceder a las propiedades del objeto Entrenador
+                    }
 
-                // Guardar en reservasClases.csv
-                using (StreamWriter sw = new StreamWriter("reservasClases .csv", true)) // true para agregar al archivo
+                    // Guardar en reservasClases.csv
+                    using (StreamWriter sw = new StreamWriter("reservasClases.csv", true)) // true para agregar al archivo
+                    {
+                        sw.WriteLine($"{entrenadorSeleccionado.Nombre},{entrenadorSeleccionado.PuntosFuertes},{entrenadorSeleccionado.Horarios},{entrenadorSeleccionado.Id}"); // Acceder a las propiedades del objeto Entrenador
+                    }
+
+                    MessageBox.Show("Matrícula guardada exitosamente.");
+                }
+                else
                 {
-                    sw.WriteLine($"{entrenadorSeleccionado},{fechaMatricula}"); // Guardar el entrenador y la fecha
+                    MessageBox.Show("Por favor, selecciona un entrenador.");
                 }
+        }
+    }
 
-                MessageBox.Show("Matrícula guardada exitosamente.");
-            }
+        private void MatricularClase_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

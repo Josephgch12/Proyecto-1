@@ -257,24 +257,15 @@
       <DependentUpon>ReportesMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Assets\addEntrenadores.csv" />
-    <None Include="Assets\entrenadores.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Assets\entrenadores.csv" />
     <None Include="Assets\Facturas.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Assets\inventario_gimnasio.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Assets\Reservas.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Assets\reservasClases .csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Assets\usuarios_gimnasio.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Assets\Reservas.csv" />
+    <None Include="Assets\usuarios_gimnasio.csv" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

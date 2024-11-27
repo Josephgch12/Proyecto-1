@@ -84,14 +84,14 @@
             // listBoxHistorial
             // 
             this.listBoxHistorial.FormattingEnabled = true;
-            this.listBoxHistorial.Location = new System.Drawing.Point(399, 172);
+            this.listBoxHistorial.Location = new System.Drawing.Point(178, 172);
             this.listBoxHistorial.Name = "listBoxHistorial";
-            this.listBoxHistorial.Size = new System.Drawing.Size(327, 225);
+            this.listBoxHistorial.Size = new System.Drawing.Size(587, 225);
             this.listBoxHistorial.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(306, 268);
+            this.button1.Location = new System.Drawing.Point(79, 261);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;

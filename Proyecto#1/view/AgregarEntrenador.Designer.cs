@@ -35,6 +35,8 @@
             this.txtEntrenador = new System.Windows.Forms.TextBox();
             this.txtPuntosFuertes = new System.Windows.Forms.TextBox();
             this.txtHorarios = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +68,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(348, 208);
+            this.btnGuardar.Location = new System.Drawing.Point(348, 257);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 3;
@@ -95,12 +97,30 @@
             this.txtHorarios.Size = new System.Drawing.Size(100, 20);
             this.txtHorarios.TabIndex = 6;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(217, 212);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Id Clase:";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(323, 212);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 8;
+            // 
             // AgregarEntrenador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Proyecto_1.Properties.Resources._321;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtHorarios);
             this.Controls.Add(this.txtPuntosFuertes);
             this.Controls.Add(this.txtEntrenador);
@@ -124,5 +144,7 @@
         private System.Windows.Forms.TextBox txtEntrenador;
         private System.Windows.Forms.TextBox txtPuntosFuertes;
         private System.Windows.Forms.TextBox txtHorarios;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

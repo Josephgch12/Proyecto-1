@@ -19,7 +19,6 @@ namespace Proyecto_1.view
         {
             InitializeComponent();
             rutaArchivoReservas = ruta;
-            CargarReservas();
         }
 
         private void CargarReservas()
@@ -66,5 +65,37 @@ namespace Proyecto_1.view
             MessageBox.Show("Reserva eliminada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CargarReservas(); // Recargar las reservas en el ComboBox
         }
-    }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string idBuscado = textBoxId.Text.Trim();
+            if (string.IsNullOrEmpty(idBuscado))
+            {
+                MessageBox.Show("Por favor, ingresa un ID.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            comboBoxClases.Items.Clear(); // Limpiar el ComboBox antes de buscar
+            bool encontrado = false;
+
+            if (File.Exists(rutaArchivoReservas))
+            {
+                var lineas = File.ReadAllLines(rutaArchivoReservas);
+                foreach (var linea in lineas)
+                {
+                    var partes = linea.Split(',');
+                    if (partes.Length >= 4 && partes[3].Trim() == idBuscado) 
+                    {
+                        comboBoxClases.Items.Add(linea); // Agregar la reserva al ComboBox
+                        encontrado = true;
+                    }
+                }
+            }
+
+            if (!encontrado)
+            {
+                MessageBox.Show("No se encontró ninguna reserva con ese ID.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+}
 }

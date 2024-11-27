@@ -91,7 +91,7 @@
             this.agregarClienteToolStripMenuItem,
             this.inicioDeSesionToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.clienteToolStripMenuItem.Text = " Cliente";
             // 
             // agregarClienteToolStripMenuItem
@@ -115,7 +115,7 @@
             this.eliminarEntrenadorToolStripMenuItem,
             this.registrarEntrenadorToolStripMenuItem});
             this.entrenadorToolStripMenuItem.Name = "entrenadorToolStripMenuItem";
-            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.entrenadorToolStripMenuItem.Text = "Entrenador";
             // 
             // agregarEntrenadorToolStripMenuItem
@@ -258,7 +258,7 @@
             // generarFacturaToolStripMenuItem
             // 
             this.generarFacturaToolStripMenuItem.Name = "generarFacturaToolStripMenuItem";
-            this.generarFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generarFacturaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.generarFacturaToolStripMenuItem.Text = "Generar Factura";
             this.generarFacturaToolStripMenuItem.Click += new System.EventHandler(this.generarFacturaToolStripMenuItem_Click);
             // 
@@ -266,7 +266,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.exitToolStripMenuItem.Text = "Exit ";
+            this.exitToolStripMenuItem.Text = "Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label1

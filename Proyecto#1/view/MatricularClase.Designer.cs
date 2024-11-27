@@ -36,9 +36,9 @@
             // comboBoxEntrenadores
             // 
             this.comboBoxEntrenadores.FormattingEnabled = true;
-            this.comboBoxEntrenadores.Location = new System.Drawing.Point(253, 144);
+            this.comboBoxEntrenadores.Location = new System.Drawing.Point(100, 144);
             this.comboBoxEntrenadores.Name = "comboBoxEntrenadores";
-            this.comboBoxEntrenadores.Size = new System.Drawing.Size(359, 21);
+            this.comboBoxEntrenadores.Size = new System.Drawing.Size(663, 21);
             this.comboBoxEntrenadores.TabIndex = 0;
             // 
             // label1
@@ -52,9 +52,9 @@
             // 
             // btnMatricular
             // 
-            this.btnMatricular.Location = new System.Drawing.Point(380, 171);
+            this.btnMatricular.Location = new System.Drawing.Point(356, 182);
             this.btnMatricular.Name = "btnMatricular";
-            this.btnMatricular.Size = new System.Drawing.Size(75, 23);
+            this.btnMatricular.Size = new System.Drawing.Size(128, 23);
             this.btnMatricular.TabIndex = 2;
             this.btnMatricular.Text = "Matricular";
             this.btnMatricular.UseVisualStyleBackColor = true;
@@ -71,6 +71,7 @@
             this.Controls.Add(this.comboBoxEntrenadores);
             this.Name = "MatricularClase";
             this.Text = "MatricularClase";
+            this.Load += new System.EventHandler(this.MatricularClase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

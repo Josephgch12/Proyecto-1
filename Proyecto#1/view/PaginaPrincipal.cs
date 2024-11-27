@@ -109,7 +109,7 @@ namespace Proyecto_1
         private void eliminarSuClaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            /// Especificar la ruta del archivo CSV de reservas
+            // Especificar la ruta del archivo CSV de reservas
             string rutaArchivoReservas = "reservas.csv";
 
             // Verificar si el archivo existe
@@ -215,7 +215,7 @@ namespace Proyecto_1
 
         private void historiaDeLasClasesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string rutaArchivo = "reservasClases .csv"; 
+            string rutaArchivo = "reservas.csv"; 
 
             // Crear una instancia del formulario FormHistorialClases
             FormHistorialClases historialClasesForm = new FormHistorialClases();

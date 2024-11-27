@@ -25,12 +25,14 @@ namespace Proyecto_1.view
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // Obtener datos del formulario.
-            string nombre = txtEntrenador.Text; // Obtener el nombre del TextBox.
-            string puntosFuertes = txtPuntosFuertes.Text; 
-            string horarios = txtHorarios.Text; 
+            string id = txtId.Text; 
+            string EntrenadorNombre = txtEntrenador.Text; // Obtener el nombre del TextBox.
+            string puntosFuertes = txtPuntosFuertes.Text;
+            string horarios = txtHorarios.Text;
 
             // Validaciones simples.
-            if (string.IsNullOrWhiteSpace(nombre) ||
+            if (string.IsNullOrWhiteSpace(id) || 
+                string.IsNullOrWhiteSpace(EntrenadorNombre) ||
                 string.IsNullOrWhiteSpace(puntosFuertes) ||
                 string.IsNullOrWhiteSpace(horarios))
             {
@@ -39,7 +41,7 @@ namespace Proyecto_1.view
             }
 
             // Crear un nuevo objeto Entrenador.
-            Entrenador nuevoEntrenador = new Entrenador(nombre, puntosFuertes, horarios);
+            Entrenador nuevoEntrenador = new Entrenador(EntrenadorNombre, puntosFuertes, horarios, id); 
 
             // Agregar el nuevo entrenador al archivo CSV.
             AgregarEntrenadorAlArchivo(nuevoEntrenador);
@@ -57,14 +59,15 @@ namespace Proyecto_1.view
                 // Si no existe, crear el archivo y agregar los encabezados.
                 using (StreamWriter sw = File.CreateText(rutaArchivo))
                 {
-                    sw.WriteLine("Entrenador,PuntosFuertes,Horarios"); // Encabezados del CSV.
+                    sw.WriteLine("Entrenador,PuntosFuertes,Horarios,Id"); // Encabezados del CSV.
                 }
             }
 
             // Agregar el nuevo entrenador al final del archivo CSV.
             using (StreamWriter sw = File.AppendText(rutaArchivo))
             {
-                sw.WriteLine(entrenador.ToString()); // Escribe los datos en el archivo.
+                // Escribir todas las propiedades del entrenador en el archivo CSV.
+                sw.WriteLine($"{entrenador.Nombre},{entrenador.PuntosFuertes},{entrenador.Horarios},{entrenador.Id}");
             }
         }
     }

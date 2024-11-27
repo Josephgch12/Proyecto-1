@@ -10,24 +10,33 @@ namespace Proyecto_1.modelos
 
     public class Entrenador
     {
-        public string EntrenadorNombre { get; set; } // Nombre del entrenador
-        public string PuntosFuertes { get; set; } // Puntos fuertes del entrenador
-        public string Horarios { get; set; } // Horarios del entrenador
+        public string Nombre { get; set; } // Propiedad Nombre
+        public string PuntosFuertes { get; set; } // Propiedad PuntosFuertes
+        public string Horarios { get; set; } // Propiedad Horarios
+        public string Id { get; set; } // Propiedad ID
 
-        // Constructor
-        public Entrenador(string nombre, string puntosFuertes, string horarios)
+        public Entrenador(string nombre, string puntosFuertes, string horarios, string id)
         {
-            EntrenadorNombre = nombre;
+            Nombre = nombre;
             PuntosFuertes = puntosFuertes;
             Horarios = horarios;
+            Id = id; // Inicializar el campo ID
         }
 
-        // Método para convertir el objeto a una línea CSV
+        public string DisplayInfo
+        {
+            get
+            {
+                return $"{Nombre} - {PuntosFuertes} - {Horarios} - {Id}"; // Combina la información
+            }
+        }
+
+
         public override string ToString()
         {
-            return $"{EntrenadorNombre},{PuntosFuertes},{Horarios}";
+            return DisplayInfo; 
         }
 
-      
-        }
+
+    }
     }

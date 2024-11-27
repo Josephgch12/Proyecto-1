@@ -1,1 +1,108 @@
-Entrenador,Fecha Matricula
+Entrenador,clase,fecha,id
+Carlos Lopez, Entrenamiento funcional, Lunes: 6:00 AM - 8:00 AM, 1293131
+Carlos Lopez, Entrenamiento funcional, Miercoles: 7:00 AM - 9:00 AM, 8374652
+Carlos Lopez, Entrenamiento funcional, Viernes: 6:00 AM - 8:00 AM, 2947568
+Carlos Lopez, Entrenamiento funcional, Sabado: 7:00 AM - 9:00 AM, 7482923
+Maria Gonzalez, Fuerza y musculacion, Lunes: 5:00 PM - 7:00 PM, 3827465
+Maria Gonzalez, Fuerza y musculacion, Miercoles: 6:00 PM - 8:00 PM, 9238472
+Maria Gonzalez, Fuerza y musculacion, Viernes: 7:00 PM - 9:00 PM, 8273645
+Maria Gonzalez, Fuerza y musculacion, Sabado: 10:00 AM - 12:00 PM, 1238946
+Juan Perez, Crossfit, Martes: 7:00 AM - 9:00 AM, 9873451
+Juan Perez, Crossfit, Jueves: 8:00 AM - 10:00 AM, 5647382
+Juan Perez, Crossfit, Sabado: 7:00 AM - 9:00 AM, 8392746
+Ana Torres, Cardio y resistencia, Sabado: 8:00 AM - 10:00 AM, 2387465
+Ana Torres, Cardio y resistencia, Domingo: 10:00 AM - 12:00 PM, 9283746
+Ana Torres, Cardio y resistencia, Viernes: 8:00 AM - 10:00 AM, 6723849
+Roberto Sanchez, Rehabilitacion deportiva, Lunes: 2:00 PM - 4:00 PM, 4758392
+Roberto Sanchez, Rehabilitacion deportiva, Miercoles: 3:00 PM - 5:00 PM, 1827364
+Roberto Sanchez, Rehabilitacion deportiva, Viernes: 4:00 PM - 6:00 PM, 9384756
+Roberto Sanchez, Rehabilitacion deportiva, Sabado: 9:00 AM - 11:00 AM, 7293846
+Laura Diaz, Yoga y meditacion, Lunes: 7:00 PM - 8:00 PM, 2847561
+Laura Diaz, Yoga y meditacion, Miercoles: 8:00 PM - 9:00 PM, 2847593
+Laura Diaz, Yoga y meditacion, Viernes: 6:00 PM - 7:00 PM, 1827362
+Laura Diaz, Yoga y meditacion, Sabado: 5:00 PM - 6:00 PM, 3748291
+Pedro Castillo, Boxeo, Martes: 6:00 PM - 7:00 PM, 9872653
+Pedro Castillo, Boxeo, Jueves: 7:00 PM - 9:00 PM, 7364832
+Pedro Castillo, Boxeo, Sabado: 3:00 PM - 4:00 PM, 2736485
+Sofia Ramirez, Pilates, Lunes: 8:00 AM - 9:00 AM, 8264752
+Sofia Ramirez, Pilates, Miercoles: 9:00 AM - 10:00 AM, 9283746
+Sofia Ramirez, Pilates, Sabado: 9:00 AM - 10:00 AM, 4768391
+Sofia Ramirez, Pilates, Domingo: 8:00 AM - 9:00 AM, 3748264
+Luis Hernandez, HIIT, Lunes: 6:00 AM - 7:00 AM, 2837465
+Luis Hernandez, HIIT, Miercoles: 7:00 AM - 8:00 AM, 9873456
+Luis Hernandez, HIIT, Viernes: 6:00 AM - 7:00 AM, 3948572
+Luis Hernandez, HIIT, Sabado: 7:00 AM - 8:00 AM, 2738456
+Diana Vega, Zumba, Martes: 7:00 PM - 8:00 PM, 3748592
+Diana Vega, Zumba, Jueves: 8:00 PM - 9:00 PM, 2839475
+Diana Vega, Zumba, Sabado: 6:00 PM - 7:00 PM, 7483926
+Diana Vega, Zumba, Domingo: 5:00 PM - 6:00 PM, 1928374
+Andres Mora, Ciclismo indoor, Lunes: 5:30 PM - 6:30 PM, 8372645
+Andres Mora, Ciclismo indoor, Miercoles: 6:00 PM - 7:00 PM, 9283746
+Andres Mora, Ciclismo indoor, Viernes: 5:30 PM - 6:30 PM, 2839476
+Andres Mora, Ciclismo indoor, Sabado: 6:30 AM - 7:30 AM, 7283945
+Claudia Reyes, Stretching, Martes: 9:00 AM - 10:00 AM, 2847563
+Claudia Reyes, Stretching, Jueves: 10:00 AM - 11:00 AM, 3748592
+Claudia Reyes, Stretching, Sabado: 11:00 AM - 12:00 PM, 3948571
+Fernando Gomez, Entrenamiento de alto rendimiento, Lunes: 4:00 PM - 5:30 PM, 9283746
+Fernando Gomez, Entrenamiento de alto rendimiento, Miercoles: 5:00 PM - 6:30 PM, 1827364
+Fernando Gomez, Entrenamiento de alto rendimiento, Viernes: 6:00 PM - 7:30 PM, 3748593
+Fernando Gomez, Entrenamiento de alto rendimiento, Sabado: 7:00 AM - 8:30 AM, 7283947
+Isabel Romero, Aerobicos, Sabado: 10:00 AM - 11:00 AM, 2847593
+Isabel Romero, Aerobicos, Domingo: 11:00 AM - 12:00 PM, 7483921
+Isabel Romero, Aerobicos, Viernes: 9:00 AM - 10:00 AM, 2738492
+Gabriel Ortiz, Natacion, Lunes: 6:00 PM - 7:00 PM, 2839472
+Gabriel Ortiz, Natacion, Miercoles: 6:30 PM - 7:30 PM, 3748263
+Gabriel Ortiz, Natacion, Viernes: 7:00 PM - 8:00 PM, 2837465
+Gabriel Ortiz, Natacion, Sabado: 4:00 PM - 5:00 PM, 3948573
+David Perez, Entrenamiento funcional, Lunes: 6:00 AM - 8:00 AM, 5874930
+David Perez, Entrenamiento funcional, Miercoles: 7:00 AM - 9:00 AM, 9283745
+David Perez, Entrenamiento funcional, Viernes: 6:00 AM - 8:00 AM, 2837461
+David Perez, Entrenamiento funcional, Sabado: 8:00 AM - 10:00 AM, 4928374
+Jessica Rios, Fuerza y musculacion, Lunes: 5:00 PM - 7:00 PM, 2837459
+Jessica Rios, Fuerza y musculacion, Miercoles: 6:00 PM - 8:00 PM, 7583946
+Jessica Rios, Fuerza y musculacion, Viernes: 7:00 PM - 9:00 PM, 4728293
+Jessica Rios, Fuerza y musculacion, Sabado: 10:00 AM - 12:00 PM, 3647284
+Julian Morales, Crossfit, Martes: 7:00 AM - 9:00 AM, 2938475
+Julian Morales, Crossfit, Jueves: 8:00 AM - 10:00 AM, 9482736
+Julian Morales, Crossfit, Sabado: 7:00 AM - 9:00 AM, 3748276
+Rosa Torres, Cardio y resistencia, Sabado: 8:00 AM - 10:00 AM, 2737462
+Rosa Torres, Cardio y resistencia, Domingo: 10:00 AM - 12:00 PM, 6473825
+Rosa Torres, Cardio y resistencia, Viernes: 8:00 AM - 10:00 AM, 9283746
+Pedro Mendoza, Rehabilitacion deportiva, Lunes: 2:00 PM - 4:00 PM, 3958472
+Pedro Mendoza, Rehabilitacion deportiva, Miercoles: 3:00 PM - 5:00 PM, 2746359
+Pedro Mendoza, Rehabilitacion deportiva, Viernes: 4:00 PM - 6:00 PM, 9287465
+Carlos Gutierrez, Boxeo, Jueves: 7:00 PM - 9:00 PM, 3948574
+Carlos Gutierrez, Boxeo, Sabado: 3:00 PM - 4:00 PM, 2837461
+Carlos Gutierrez, Boxeo, Martes: 6:00 PM - 7:00 PM, 3847265
+Valentina Castro, Yoga y meditacion, Lunes: 7:00 PM - 8:00 PM, 3847562
+Valentina Castro, Yoga y meditacion, Miercoles: 8:00 PM - 9:00 PM, 4758392
+Valentina Castro, Yoga y meditacion, Viernes: 6:00 PM - 7:00 PM, 2837465
+Valentina Castro, Yoga y meditacion, Sabado: 5:00 PM - 6:00 PM, 3948271
+Javier Salazar, HIIT, Lunes: 6:00 AM - 7:00 AM, 8473921
+Javier Salazar, HIIT, Miercoles: 7:00 AM - 8:00 AM, 2738495
+Javier Salazar, HIIT, Viernes: 6:00 AM - 7:00 AM, 3748293
+Javier Salazar, HIIT, Sabado: 7:00 AM - 8:00 AM, 2837459
+Carolina Reyes, Zumba, Martes: 7:00 PM - 8:00 PM, 3947561
+Carolina Reyes, Zumba, Jueves: 8:00 PM - 9:00 PM, 4873926
+Carolina Reyes, Zumba, Sabado: 6:00 PM - 7:00 PM, 2938471
+Carolina Reyes, Zumba, Domingo: 5:00 PM - 6:00 PM, 3847568
+Oscar Torres, Ciclismo indoor, Lunes: 5:30 PM - 6:30 PM, 7384921
+Oscar Torres, Ciclismo indoor, Miercoles: 6:00 PM - 7:00 PM, 2738492
+Oscar Torres, Ciclismo indoor, Viernes: 5:30 PM - 6:30 PM, 3928475
+Oscar Torres, Ciclismo indoor, Sabado: 6:30 AM - 7:30 AM, 3948571
+Natalia Diaz, Stretching, Martes: 9:00 AM - 10:00 AM, 2837465
+Natalia Diaz, Stretching, Jueves: 10:00 AM - 11:00 AM, 3748593
+Natalia Diaz, Stretching, Sabado: 11:00 AM - 12:00 PM, 3847262
+Rafael Romero, Entrenamiento de alto rendimiento, Lunes: 4:00 PM - 5:30 PM, 3948574
+Rafael Romero, Entrenamiento de alto rendimiento, Miercoles: 5:00 PM - 6:30 PM, 3948265
+Rafael Romero, Entrenamiento de alto rendimiento, Viernes: 6:00 PM - 7:30 PM, 3928473
+Rafael Romero, Entrenamiento de alto rendimiento, Sabado: 7:00 AM - 8:30 AM, 3849271
+Andrea Lopez, Aerobicos, Sabado: 10:00 AM - 11:00 AM, 3748292
+Andrea Lopez, Aerobicos, Domingo: 11:00 AM - 12:00 PM, 2837467
+Andrea Lopez, Aerobicos, Viernes: 9:00 AM - 10:00 AM, 2948756
+Gabriela Torres, Natacion, Lunes: 6:00 PM - 7:00 PM, 7384921
+Gabriela Torres, Natacion, Miercoles: 6:30 PM - 7:30 PM, 2938475
+Gabriela Torres, Natacion, Viernes: 7:00 PM - 8:00 PM, 3948753
+Gabriela Torres, Natacion, Sabado: 4:00 PM - 5:00 PM, 2837464
+Adrian Perez, Entrenamiento funcional, Lunes: 6:00 AM - 8:00 AM, 3847569
+Adrian Perez, Entrenamiento funcional, Miercoles: 7:00 AM - 9:00 AM, 7384927
