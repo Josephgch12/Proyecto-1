@@ -10,7 +10,7 @@ namespace Proyecto_1.modelos
     public class Factura
     {
         
-    public int Id { get; set; }          // ID de la factura
+    public int Id { get; set; }        
         public string ClienteId { get; set; } 
         public decimal Monto { get; set; }   
         public DateTime FechaEmision { get; set; } 
