@@ -13,7 +13,7 @@ namespace Proyecto_1.view
 {
     public partial class AgregarMaquina : Form
     {
-        // Especificar la ruta del archivo CSV de máquinas
+        
         private const string rutaArchivoMaquinas = "inventario_gimnasio.csv";
         private Random random;
         public AgregarMaquina()

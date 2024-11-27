@@ -26,8 +26,8 @@ namespace Proyecto_1.view
         {
             // Obtener datos del formulario.
             string nombre = txtEntrenador.Text; // Obtener el nombre del TextBox.
-            string puntosFuertes = txtPuntosFuertes.Text; // Obtener los puntos fuertes del TextBox.
-            string horarios = txtHorarios.Text; // Obtener los horarios del TextBox.
+            string puntosFuertes = txtPuntosFuertes.Text; 
+            string horarios = txtHorarios.Text; 
 
             // Validaciones simples.
             if (string.IsNullOrWhiteSpace(nombre) ||

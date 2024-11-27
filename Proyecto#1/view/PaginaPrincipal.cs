@@ -51,7 +51,7 @@ namespace Proyecto_1
 
         private void eliminarEntrenadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /// Cambia "entrenadores.csv" por la ruta correcta de tu archivo CSV
+            
             EliminarEntrenador eliminarEntrenadorForm = new EliminarEntrenador("entrenadores.csv");
 
             // Muestra el formulario
@@ -60,7 +60,7 @@ namespace Proyecto_1
 
         private void matricularClaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Especificar la ruta del archivo CSV de entrenadores
+            // Especificar la ruta del archivo CSV
             string rutaArchivoEntrenadores = "entrenadores.csv"; 
 
             // Crear una instancia del formulario MatricularClase y pasar la ruta del archivo
@@ -91,7 +91,7 @@ namespace Proyecto_1
 
         private void consultarInventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Especificar la ruta del archivo CSV de máquinas
+            // Especificar la ruta del archivo CSV 
             string rutaArchivoMaquinas = "inventario_gimnasio.csv";
 
             // Crear una instancia del formulario ConsultarMaquinas
@@ -103,7 +103,7 @@ namespace Proyecto_1
 
         private void agregarMaquinaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Especificar la ruta del archivo CSV de máquinas
+            
             string rutaArchivoMaquinas = "inventario_gimnasio.csv";
 
             // Crear una instancia del formulario AgregarMaquina
@@ -115,7 +115,7 @@ namespace Proyecto_1
 
         private void elimarMaquinaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Especificar la ruta del archivo CSV de máquinas
+            
             string rutaArchivoMaquinas = "inventario_gimnasio.csv";
 
             // Crear una instancia del formulario EliminarMaquina y pasar la ruta del archivo
@@ -160,7 +160,7 @@ namespace Proyecto_1
         private void informeContableToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Ruta del archivo CSV
-            string rutaArchivo = "inventario_gimnasio.csv"; // Asegúrate de que la ruta sea correcta
+            string rutaArchivo = "inventario_gimnasio.csv"; 
 
             // Crear una instancia del formulario informeContable y pasar la ruta del archivo
             informeContable informeContableForm = new informeContable(rutaArchivo);
@@ -175,6 +175,17 @@ namespace Proyecto_1
             GenerarFactura generarFacturaForm = new GenerarFactura();
             // Mostrar el formulario
             generarFacturaForm.ShowDialog();
+        }
+
+        private void historiaDeLasClasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string rutaArchivo = "reservasClases .csv"; 
+
+            // Crear una instancia del formulario FormHistorialClases
+            FormHistorialClases historialClasesForm = new FormHistorialClases();
+
+            // Mostrar el formulario
+            historialClasesForm.ShowDialog();
         }
     }
     }

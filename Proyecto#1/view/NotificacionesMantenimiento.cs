@@ -28,7 +28,7 @@ namespace Proyecto_1.view
             if (File.Exists(rutaArchivo))
             {
                 var lineas = File.ReadAllLines(rutaArchivo).Skip(1); // Saltar encabezados
-
+                
                 foreach (var linea in lineas)
                 {
                     // Omitir la línea de encabezado si aparece de nuevo
@@ -49,11 +49,11 @@ namespace Proyecto_1.view
                         string vidaUtilStr = datos[4].Trim();
                         MessageBox.Show($"Intentando convertir la vida útil: '{vidaUtilStr}'");
 
-                        // Intentar convertir la vida útil
+                        
                         if (int.TryParse(vidaUtilStr, out int vidaUtil))
                         {
-                            // Aquí puedes definir la lógica que necesites para filtrar
-                            if (vidaUtil <= 3) // Cambia esta condición según tus necesidades
+                            
+                            if (vidaUtil <= 3) 
                             {
                                 comboBoxMaquinas.Items.Add($"{idMaquina} - {nombreMaquina} (Tipo: {tipoMaquina}, Estado: {estado})");
                             }

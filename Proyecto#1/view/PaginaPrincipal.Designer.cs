@@ -39,9 +39,6 @@
             this.clasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matricularClaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarSuClaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historialDeClasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.entrenadorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.membresiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarMembresiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,7 +90,7 @@
             this.agregarClienteToolStripMenuItem,
             this.inicioDeSesionToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = " Cliente";
             // 
             // agregarClienteToolStripMenuItem
@@ -116,7 +113,7 @@
             this.agregarEntrenadorToolStripMenuItem,
             this.eliminarEntrenadorToolStripMenuItem});
             this.entrenadorToolStripMenuItem.Name = "entrenadorToolStripMenuItem";
-            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.entrenadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.entrenadorToolStripMenuItem.Text = "Entrenador";
             // 
             // agregarEntrenadorToolStripMenuItem
@@ -137,8 +134,7 @@
             // 
             this.clasesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.matricularClaseToolStripMenuItem,
-            this.eliminarSuClaseToolStripMenuItem,
-            this.historialDeClasesToolStripMenuItem});
+            this.eliminarSuClaseToolStripMenuItem});
             this.clasesToolStripMenuItem.Name = "clasesToolStripMenuItem";
             this.clasesToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.clasesToolStripMenuItem.Text = "Clases";
@@ -146,37 +142,16 @@
             // matricularClaseToolStripMenuItem
             // 
             this.matricularClaseToolStripMenuItem.Name = "matricularClaseToolStripMenuItem";
-            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.matricularClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matricularClaseToolStripMenuItem.Text = "matricular clase";
             this.matricularClaseToolStripMenuItem.Click += new System.EventHandler(this.matricularClaseToolStripMenuItem_Click);
             // 
             // eliminarSuClaseToolStripMenuItem
             // 
             this.eliminarSuClaseToolStripMenuItem.Name = "eliminarSuClaseToolStripMenuItem";
-            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.eliminarSuClaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarSuClaseToolStripMenuItem.Text = "eliminar su clase ";
             this.eliminarSuClaseToolStripMenuItem.Click += new System.EventHandler(this.eliminarSuClaseToolStripMenuItem_Click);
-            // 
-            // historialDeClasesToolStripMenuItem
-            // 
-            this.historialDeClasesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItem1,
-            this.entrenadorToolStripMenuItem1});
-            this.historialDeClasesToolStripMenuItem.Name = "historialDeClasesToolStripMenuItem";
-            this.historialDeClasesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.historialDeClasesToolStripMenuItem.Text = "Historial de clases ";
-            // 
-            // clienteToolStripMenuItem1
-            // 
-            this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
-            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
-            this.clienteToolStripMenuItem1.Text = "cliente ";
-            // 
-            // entrenadorToolStripMenuItem1
-            // 
-            this.entrenadorToolStripMenuItem1.Name = "entrenadorToolStripMenuItem1";
-            this.entrenadorToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
-            this.entrenadorToolStripMenuItem1.Text = "entrenador";
             // 
             // membresiasToolStripMenuItem
             // 
@@ -261,6 +236,7 @@
             this.historiaDeLasClasesToolStripMenuItem.Name = "historiaDeLasClasesToolStripMenuItem";
             this.historiaDeLasClasesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.historiaDeLasClasesToolStripMenuItem.Text = "Historia de las clases ";
+            this.historiaDeLasClasesToolStripMenuItem.Click += new System.EventHandler(this.historiaDeLasClasesToolStripMenuItem_Click);
             // 
             // facturaciónToolStripMenuItem
             // 
@@ -349,7 +325,6 @@
         private System.Windows.Forms.ToolStripMenuItem clasesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem matricularClaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarSuClaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem historialDeClasesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem membresiasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarMembresiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
@@ -365,8 +340,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem entrenadorToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generarFacturaToolStripMenuItem;
     }

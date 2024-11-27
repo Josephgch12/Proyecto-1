@@ -16,7 +16,7 @@ namespace Proyecto_1.modelos
         public string Contrasena { get; set; }
         public DateTime FechaDeVencimiento { get; set; }
 
-        // Constructor sin parámetros (opcional, pero recomendado)
+        // Constructor sin parámetros 
         public Membresia() { }
 
         // Método para calcular el tiempo restante

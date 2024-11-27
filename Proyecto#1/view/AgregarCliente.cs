@@ -29,7 +29,7 @@ namespace Proyecto_1.view
         {
             Random random = new Random();
             DateTime fechaInicio = new DateTime(2024, 11, 20); // Fecha de inicio: 20 de noviembre de 2024.
-            DateTime fechaFin = fechaInicio.AddMonths(2); // Fecha de fin: 20 de enero de 2025.
+            DateTime fechaFin = fechaInicio.AddMonths(2); // Fecha de fin
 
             // Generar un día aleatorio entre la fecha de inicio y la fecha de fin.
             int rangoDias = (fechaFin - fechaInicio).Days; // Calcular el rango de días.
@@ -62,11 +62,11 @@ namespace Proyecto_1.view
             // Obtener datos del formulario.
             string id = txtId.Text; // Obtener el ID del TextBox.
             string nombre = txtNombre.Text; // Obtener el nombre del TextBox.
-            string correo = txtCorreo.Text; // Obtener el correo del TextBox.
-            string contraseña = txtContraseña.Text; // Obtener la contraseña del TextBox.
+            string correo = txtCorreo.Text; 
+            string contraseña = txtContraseña.Text; 
 
             // Indicar que es un cliente.
-            string tipoCliente = "Cliente"; // Puedes usar un Label o TextBox si lo deseas.
+            string tipoCliente = "Cliente"; 
 
             // Generar una fecha de vencimiento aleatoria.
             string fechaVencimiento = GenerarFechaVencimiento();
