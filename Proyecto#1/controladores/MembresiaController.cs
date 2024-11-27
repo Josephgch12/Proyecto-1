@@ -45,7 +45,7 @@ namespace Proyecto_1.controladores
                     if (datos.Length != 6)
                     {
                         Console.WriteLine($"La línea no tiene el número correcto de columnas: {linea}");
-                        continue; // O lanzar una excepción, según tu lógica
+                        continue; 
                     }
 
                     // Verificar y parsear la fecha de vencimiento
@@ -59,10 +59,10 @@ namespace Proyecto_1.controladores
                     var membresia = new Membresia
                     {
                         ID = int.Parse(datos[0]), // ID
-                        Nombre = datos[1],        // Nombre
-                        Correo = datos[2],       // Correo
-                        Tipo = datos[3],         // Tipo
-                        Contrasena = datos[4],   // Contraseña
+                        Nombre = datos[1],        
+                        Correo = datos[2],       
+                        Tipo = datos[3],         
+                        Contrasena = datos[4],  
                         FechaDeVencimiento = fechaDeVencimiento // Fecha de Vencimiento
                     };
 

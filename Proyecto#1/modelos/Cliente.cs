@@ -12,9 +12,9 @@ namespace Proyecto_1.modelos
     {
         public int Id { get; set; } // Identificador único del cliente.
         public string Nombre { get; set; } // Nombre del cliente.
-        public string Correo { get; set; } // Correo electrónico del cliente.
-        public string Tipo { get; set; } // Tipo de cliente (Cliente o Entrenador).
-        public string Contraseña { get; set; } // Contraseña del cliente.
+        public string Correo { get; set; } 
+        public string Tipo { get; set; } 
+        public string Contraseña { get; set; } 
 
         // Constructor para inicializar un nuevo cliente.
         public Cliente(int id, string nombre, string correo, string tipo, string contraseña)

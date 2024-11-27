@@ -15,21 +15,25 @@ namespace Proyecto_1.view
     public partial class MatricularClase : Form
     {
         private List<Entrenador> entrenadores; // Lista de entrenadores
-        private string rutaArchivo; // Ruta del archivo CSV
+        private string rutaArchivoEntrenadores; // Ruta del archivo CSV
+        private string rutaArchivoReservas; // Ruta del archivo CSV de reservas
+        private string rutaArchivoReservasClases;
 
-        public MatricularClase(string rutaArchivo)
+        public MatricularClase(string rutaArchivoEntrenadores, string rutaArchivoReservas, string rutaArchivoReservasClases)
         {
             InitializeComponent();
-            this.rutaArchivo = rutaArchivo; // Guardar la ruta del archivo
+            this.rutaArchivoEntrenadores = rutaArchivoEntrenadores; // Guardar la ruta del archivo
+            this.rutaArchivoReservas = rutaArchivoReservas; // Guardar la ruta del archivo de reservas
+            this.rutaArchivoReservasClases = rutaArchivoReservasClases; 
             entrenadores = new List<Entrenador>(); // Inicializar la lista
             CargarEntrenadores(); // Cargar entrenadores desde el archivo
         }
 
         private void CargarEntrenadores()
         {
-            if (File.Exists(rutaArchivo))
+            if (File.Exists(rutaArchivoEntrenadores))
             {
-                var lineas = File.ReadAllLines(rutaArchivo);
+                var lineas = File.ReadAllLines(rutaArchivoEntrenadores);
                 foreach (var linea in lineas.Skip(1)) // Saltar la cabecera
                 {
                     var partes = linea.Split(',');
@@ -58,6 +62,12 @@ namespace Proyecto_1.view
 
                 // Guardar en reservas.csv
                 using (StreamWriter sw = new StreamWriter("reservas.csv", true)) // true para agregar al archivo
+                {
+                    sw.WriteLine($"{entrenadorSeleccionado},{fechaMatricula}"); // Guardar el entrenador y la fecha
+                }
+
+                // Guardar en reservasClases.csv
+                using (StreamWriter sw = new StreamWriter("reservasClases .csv", true)) // true para agregar al archivo
                 {
                     sw.WriteLine($"{entrenadorSeleccionado},{fechaMatricula}"); // Guardar el entrenador y la fecha
                 }

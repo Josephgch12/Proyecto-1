@@ -11,9 +11,9 @@ namespace Proyecto_1.modelos
     {
         
     public int Id { get; set; }          // ID de la factura
-        public string ClienteId { get; set; } // ID del cliente
-        public decimal Monto { get; set; }   // Monto de la factura
-        public DateTime FechaEmision { get; set; } // Fecha de emisión de la factura
+        public string ClienteId { get; set; } 
+        public decimal Monto { get; set; }   
+        public DateTime FechaEmision { get; set; } 
         public string Descripcion { get; set; } // Descripción de la factura
 
         // Constructor por defecto

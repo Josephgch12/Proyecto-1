@@ -25,11 +25,11 @@ namespace Proyecto_1
             ConfigurarMenu(); // Configurar el menú según el tipo de usuario
         }
 
-        // Constructor por defecto (opcional, si necesitas uno sin parámetros)
+       
         public PaginaPrincipal()
         {
             InitializeComponent();
-            // Puedes dejar este constructor vacío o agregar lógica adicional si es necesario
+            
         }
 
         private void ConfigurarMenu()
@@ -95,10 +95,12 @@ namespace Proyecto_1
         private void matricularClaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Especificar la ruta del archivo CSV
-            string rutaArchivoEntrenadores = "entrenadores.csv"; 
+            string rutaArchivoEntrenadores = "entrenadores.csv";
+            string rutaArchivoReservas = "reservas.csv";
+            string rutaArchivoReservasClases = "reservasClases .csv";
 
             // Crear una instancia del formulario MatricularClase y pasar la ruta del archivo
-            MatricularClase matricularClaseForm = new MatricularClase(rutaArchivoEntrenadores);
+            MatricularClase matricularClaseForm = new MatricularClase(rutaArchivoEntrenadores, rutaArchivoReservas, rutaArchivoReservasClases);
 
             // Mostrar el formulario
             matricularClaseForm.ShowDialog(); 
