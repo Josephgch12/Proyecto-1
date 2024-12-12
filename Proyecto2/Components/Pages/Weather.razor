@@ -1,0 +1,99 @@
+﻿@page "/weather"
+@using Microsoft.AspNetCore.Components.Web
+@using Proyecto2.Models
+@using Proyecto2.Server.Data
+@inject ApplicationDbContext _context
+
+<PageTitle>Weather</PageTitle>
+
+<h1>Weather</h1>
+
+<p>This component demonstrates showing data.</p>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+<br/>
+
+
+<label>ID</label>
+<input type="number" @bind-value=adminis.Id  class="form-control" />
+
+
+<br />
+<label>Nombre</label>
+<input type="text" @bind-value=adminis.Nombre  class="form-control" />
+<br />
+<label>Contreña</label>
+
+<input type="text" @bind-value=adminis.Contraseña  class="form-control" />
+
+<buttom  @onclick=Guardar class="btn-outline-success" > Guardar </buttom>
+@code {
+
+    Admin adminis = new Admin();
+    private const string V = "Guardado exitoso";
+    string mensaje = "";
+
+    async Task Guardar() 
+    {
+        _context.admin.Add(adminis);
+        await _context.SaveChangesAsync();
+        mensaje = V;
+
+    }
+
+  
+
+
+
+    private WeatherForecast[]? forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate asynchronous loading to demonstrate a loading indicator
+        await Task.Delay(500);
+
+        var startDate = DateOnly.FromDateTime(DateTime.Now);
+        var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
+        forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        {
+            Date = startDate.AddDays(index),
+            TemperatureC = Random.Shared.Next(-20, 55),
+            Summary = summaries[Random.Shared.Next(summaries.Length)]
+        }).ToArray();
+    }
+
+    private class WeatherForecast
+    {
+        public DateOnly Date { get; set; }
+        public int TemperatureC { get; set; }
+        public string? Summary { get; set; }
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}
