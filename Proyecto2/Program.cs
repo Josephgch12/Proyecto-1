@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Proyecto2.Components;
-using Proyecto2.Server.Data;
+using Proyecto_1.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,6 +1,6 @@
 ﻿@page "/weather"
 @using Microsoft.AspNetCore.Components.Web
-@using Proyecto2.Models
+@using Proyecto_1.modelos;
 @using Proyecto2.Server.Data
 @inject ApplicationDbContext _context
 
@@ -41,8 +41,8 @@ else
 <br/>
 
 
-<label>ID</label>
-<input type="number" @bind-value=adminis.Id  class="form-control" />
+
+
 
 
 <br />
@@ -52,19 +52,23 @@ else
 <label>Contreña</label>
 
 <input type="text" @bind-value=adminis.Contraseña  class="form-control" />
+<br />
+<button @onclick=Guardar class="btn-outline-success">Guardar</button>
 
-<buttom  @onclick=Guardar class="btn-outline-success" > Guardar </buttom>
+<p>@mensaje</p>
+
 @code {
 
     Admin adminis = new Admin();
-    private const string V = "Guardado exitoso";
+
     string mensaje = "";
 
     async Task Guardar() 
     {
+       
         _context.admin.Add(adminis);
         await _context.SaveChangesAsync();
-        mensaje = V;
+        mensaje = "Guardado exitoso";
 
     }
 

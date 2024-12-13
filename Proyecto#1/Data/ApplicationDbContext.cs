@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Net.Sockets;
-using Proyecto_1.modelos;
-namespace Proyecto_1.Server.Data
+using Proyecto2.Models;
+namespace Proyecto2.Server.Data
 {
     public class ApplicationDbContext : DbContext
     {

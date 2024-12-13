@@ -76,6 +76,8 @@
   <ItemGroup>
     <Compile Include="controladores\MatriculaCalculator.cs" />
     <Compile Include="controladores\MembresiaController.cs" />
+    <Compile Include="Data\ApplicationDbContext.cs" />
+    <Compile Include="modelos\Admin.cs" />
     <Compile Include="modelos\Clase.cs" />
     <Compile Include="modelos\Cliente.cs" />
     <Compile Include="modelos\Entrenador.cs" />
