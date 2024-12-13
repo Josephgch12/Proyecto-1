@@ -24,7 +24,7 @@ namespace Proyecto_1.Server.Controller
         [HttpGet]
         public async Task<ActionResult<List<Admin>>> GetAdmin()
         {
-            var lista = await _context.Admin.ToListAsync();
+            var lista = await _context.admin.ToListAsync();
             return Ok(lista);
         }
 
@@ -33,7 +33,7 @@ namespace Proyecto_1.Server.Controller
         [Route("{id}")]
         public async Task<ActionResult<List<Admin>>> GetSingleAdmin(int id)
         {
-            var miobjeto = await _context.Admins.FirstOrDefaultAsync(ob => ob.Id == id);
+            var miobjeto = await _context.admin.FirstOrDefaultAsync(ob => ob.Id == id);
             if (miobjeto == null)
             {
                 return NotFound(" :/");
@@ -46,7 +46,7 @@ namespace Proyecto_1.Server.Controller
         public async Task<ActionResult<Admin>> CreateAdmin(Admin objeto)
         {
 
-            _context.Admins.Add(objeto);
+            _context.admin.Add(objeto);
             await _context.SaveChangesAsync();
             return Ok(await GetDbAdmin());
         }
@@ -55,7 +55,7 @@ namespace Proyecto_1.Server.Controller
         public async Task<ActionResult<List<Admin>>> UpdateAdmin(Admin objeto)
         {
 
-            var DbObjeto = await _context.Admins.FindAsync(objeto.Id);
+            var DbObjeto = await _context.admin.FindAsync(objeto.Id);
             if (DbObjeto == null)
                 return BadRequest("no se encuentra");
             DbObjeto.Nombre = objeto.Nombre;
@@ -63,7 +63,7 @@ namespace Proyecto_1.Server.Controller
 
             await _context.SaveChangesAsync();
 
-            return Ok(await _context.Admins.ToListAsync());
+            return Ok(await _context.admin.ToListAsync());
 
 
         }
@@ -73,13 +73,13 @@ namespace Proyecto_1.Server.Controller
         [Route("{id}")]
         public async Task<ActionResult<List<Admin>>> DeleteAdmin(int id)
         {
-            var DbObjeto = await _context.Admins.FirstOrDefaultAsync(Ob => Ob.Id == id);
+            var DbObjeto = await _context.admin.FirstOrDefaultAsync(Ob => Ob.Id == id);
             if (DbObjeto == null)
             {
                 return NotFound("no existe :/");
             }
 
-            _context.Admins.Remove(DbObjeto);
+            _context.admin.Remove(DbObjeto);
             await _context.SaveChangesAsync();
 
             return Ok(await GetDbAdmin());
@@ -88,7 +88,7 @@ namespace Proyecto_1.Server.Controller
 
         private async Task<List<Admin>> GetDbAdmin()
         {
-            return await _context.Admins.ToListAsync();
+            return await _context.admin.ToListAsync();
         }
    
     
