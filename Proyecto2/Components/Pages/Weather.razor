@@ -45,33 +45,11 @@ else
 
 
 
-<br />
-<label>Nombre</label>
-<input type="text" @bind-value=adminis.Nombre  class="form-control" />
-<br />
-<label>Contreña</label>
 
-<input type="text" @bind-value=adminis.Contraseña  class="form-control" />
-<br />
-<button @onclick=Guardar class="btn-outline-success">Guardar</button>
-
-<p>@mensaje</p>
 
 @code {
 
-    Admin adminis = new Admin();
-
-    string mensaje = "";
-
-    async Task Guardar() 
-    {
-       
-        _context.admin.Add(adminis);
-        await _context.SaveChangesAsync();
-        mensaje = "Guardado exitoso";
-
-    }
-
+    
   
 
 

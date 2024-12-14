@@ -1,0 +1,291 @@
+﻿@page "/admin"
+@inject AdminService AdminService
+@using Proyecto_1.modelos;
+<h3>Administradores</h3>
+
+<button @onclick="ShowCreateAdmin">Agregar Administrador</button>
+
+@if(admin ==null)
+
+{
+
+
+
+
+
+
+
+
+
+    <
+    p
+    >
+        <
+        em
+        >
+            Cargando...
+        </
+        em
+        >
+    </
+    p
+    >
+
+}
+
+else
+
+{
+
+
+    <
+    table
+
+    class
+    =
+    "
+table
+    "
+    >
+
+
+        <
+        thead
+        >
+
+
+            <
+            tr
+            >
+
+
+                <
+                th
+                >
+                    ID
+                </
+                th
+                >
+
+
+                <
+                th
+                >
+                    Nombre
+                </
+                th
+                >
+
+
+                <
+                th
+                >
+                    Acciones
+                </
+                th
+                >
+
+
+            </
+            tr
+            >
+
+
+        </
+        thead
+        >
+
+
+        <
+        tbody
+        >
+
+
+            @foreach
+
+          ( ) ;
+            // var
+       //admin 
+       // in
+       //new admin
+       
+
+
+            {
+
+
+                <
+                tr
+                >
+
+
+                    <
+                    td
+                    >
+                        @admin
+
+                        .
+                        Id
+                    </
+                    td
+                    >
+
+
+                    <
+                    td
+                    >
+                        @admin
+
+                        .
+                        Nombre
+                    </
+                    td
+                    >
+
+
+                    <
+                    td
+                    >
+
+
+                        <
+                        button
+
+                        @onclick
+                        =
+                        "
+() => EditAdmin(admin.Id)
+                        "
+                        >
+                            Editar
+                        </
+                        button
+                        >
+
+
+                        <
+                        button
+
+                        @onclick
+                        =
+                        "
+() => DeleteAdmin(admin.Id)
+                        "
+                        >
+                            Eliminar
+                        </
+                        button
+                        >
+
+
+                    </
+                    td
+                    >
+
+
+                </
+                tr
+                >
+
+
+            }
+
+
+        </
+        tbody
+        >
+
+
+    </
+    table
+    >
+
+}
+
+
+@if
+
+(
+//showCreateModal
+)
+
+{
+
+
+    <
+    EditAdminModal
+
+    OnClose
+    =
+    "
+CloseModal
+    "
+
+    OnSave
+    =
+    "
+SaveAdmin
+    "
+
+    />
+
+}
+
+
+@code
+
+{
+    //Admin admins = new Admin();
+
+    //private List<Admin> admin;
+
+
+    /// <summary>
+    //private bool showCreateModal =false;
+    /// </summary>
+    /// <returns></returns>
+
+        //protected override async Task
+
+    // OnInitializedAsync() => admins = await AdminService.GetAdminsAsync();
+
+
+    //private void ShowCreateAdmin(){
+
+    //     showCreateModal = true;
+    //
+    // private void CloseModal(){
+
+    //showCreateModal = false;  
+    //}
+
+
+
+     //rivate async Task SaveAdmin(Admin admin){
+
+
+    //  await AdminService.CreateAdminAsync(admins);
+
+    //  admins= await AdminService.GetAdminsAsync();
+    //
+    //
+    //  CloseModal();
+    //  }
+
+
+
+
+    // private async Task EditAdmin(int id){
+    //
+
+    // Implementar lógica para editar un administrador
+
+
+    // private async Task DeleteAdmin(int id){
+
+    // await AdminService.DeleteAdminAsync(id);
+    //  admins = await AdminService.GetAdminsAsync();
+    //}
+
+        //
+    }
